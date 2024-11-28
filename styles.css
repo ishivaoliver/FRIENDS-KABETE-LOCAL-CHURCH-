@@ -801,4 +801,29 @@ footer .btn:hover {
 }
 
 
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
 
