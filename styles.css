@@ -801,29 +801,33 @@ footer .btn:hover {
 }
 
 
-/* Back to Top Button */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #007bff; /* Primary button color */
-    color: #fff;
+/* Back to Top Button in Footer */
+footer .back-to-top {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #2c3e50;
     border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    text-align: center;
-    line-height: 50px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: none; /* Hidden by default */
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
-.back-to-top:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+footer .back-to-top:hover {
+    background: linear-gradient(45deg, #e67e22, #f39c12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
+
+/* Adjust for Smaller Screens */
+@media (max-width: 576px) {
+    footer .back-to-top {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
 
 

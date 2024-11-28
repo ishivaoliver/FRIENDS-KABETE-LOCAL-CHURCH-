@@ -173,9 +173,9 @@ window.addEventListener('scroll', () => {
 });
 
 // Smooth Scroll to Top
-backToTopButton.addEventListener('click', () => {
+document.getElementById('backToTop').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Smooth scroll effect
+        behavior: 'smooth',
     });
 });
