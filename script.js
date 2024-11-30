@@ -179,3 +179,25 @@ document.getElementById('backToTop').addEventListener('click', () => {
         behavior: 'smooth',
     });
 });
+
+
+
+// Back to Top Button Functionality
+const backToTopButton = document.getElementById('backToTop');
+
+// Show/Hide Button on Scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Show button when scrolled down 300px
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Smooth Scroll to Top on Click
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
