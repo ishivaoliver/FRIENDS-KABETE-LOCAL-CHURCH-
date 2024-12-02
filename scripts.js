@@ -28,6 +28,54 @@ window.addEventListener('load', () => {
     document.querySelector('.hero-image img').classList.add('fade-in');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const heroHeading = document.querySelector("#hero h1");
+    const heroParagraph = document.querySelector("#hero p");
+
+    const resizeText = () => {
+        const viewportWidth = window.innerWidth;
+        
+        if (viewportWidth <= 576) {
+            heroHeading.style.fontSize = `${Math.max(18, viewportWidth * 0.05)}px`;
+            heroParagraph.style.fontSize = `${Math.max(14, viewportWidth * 0.03)}px`;
+        } else {
+            heroHeading.style.fontSize = ""; // Reset to CSS-defined styles
+            heroParagraph.style.fontSize = "";
+        }
+    };
+
+    // Adjust on load and on resize
+    resizeText();
+    window.addEventListener("resize", resizeText);
+});
+
+
+// Hero section buttons responsiveness
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("#hero .btn");
+
+    const resizeButtons = () => {
+        const viewportWidth = window.innerWidth;
+
+        buttons.forEach((button) => {
+            if (viewportWidth <= 576) {
+                button.style.fontSize = `${Math.max(12, viewportWidth * 0.02)}px`;
+                button.style.padding = `${Math.max(8, viewportWidth * 0.01)}px ${Math.max(10, viewportWidth * 0.02)}px`;
+            } else {
+                button.style.fontSize = ""; // Reset to CSS-defined styles
+                button.style.padding = "";
+            }
+        });
+    };
+
+    // Adjust on load and on resize
+    resizeButtons();
+    window.addEventListener("resize", resizeButtons);
+});
+
+
+
+
 // 4. Back to Top Button
 const backToTopBtn = document.createElement('button');
 backToTopBtn.innerHTML = '↑';
@@ -158,4 +206,3 @@ document.addEventListener('DOMContentLoaded', () => {
         return regex.test(email);
     }
 });
-

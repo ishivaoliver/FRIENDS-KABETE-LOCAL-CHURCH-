@@ -162,6 +162,7 @@ a:hover {
 /* Hero Content */
 #hero .container {
     z-index: 2;
+    padding: 0 1rem;
 }
 
 #hero h1 {
@@ -169,6 +170,7 @@ a:hover {
     font-weight: 700;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
+    line-height: 1.2; /* Ensures proper spacing for multi-line headings */
 }
 
 #hero p {
@@ -176,12 +178,29 @@ a:hover {
     font-weight: 300;
     margin-bottom: 30px;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+
+    #hero p {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+
+    #hero .btn {
+        width: 100%; /* Full-width buttons on small screens */
+        font-size: 1rem;
+    }
 }
 
 /* Buttons */
 #hero .btn {
     padding: 10px 20px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
 }
@@ -195,6 +214,7 @@ a:hover {
 #hero .btn-light:hover {
     background-color: #f1f1f1;
     color: #0056b3;
+    
 }
 
 #hero .btn-primary {
@@ -217,7 +237,26 @@ a:hover {
 }
 
 
+/* Responsive Adjustments for Buttons */
+@media (max-width: 768px) {
+    #hero .btn {
+        width: 100%; /* Full-width buttons */
+        font-size: 1rem;
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+    }
 
+    #hero .d-flex {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between stacked buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    #hero .btn {
+        font-size: 0.9rem;
+        padding: 8px 12px; /* Compact padding for very small screens */
+    }
+}
 
 /* Responsive Adjustments */
 @media (max-width: 576px) {
