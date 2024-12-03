@@ -24,55 +24,114 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
 });
 
 // 3. Hero Section Background Image Fade In
-window.addEventListener('load', () => {
-    document.querySelector('.hero-image img').classList.add('fade-in');
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-    const heroHeading = document.querySelector("#hero h1");
-    const heroParagraph = document.querySelector("#hero p");
+    const slider = document.querySelector(".hero-slider");
+    const slides = document.querySelectorAll(".hero-slider .slide");
+    let currentIndex = 0;
 
-    const resizeText = () => {
+    const changeSlide = () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
+
+    // Auto-slide every 5 seconds
+    setInterval(changeSlide, 5000);
+
+    // Ensure text responsiveness on resize
+    const adjustTextSize = () => {
         const viewportWidth = window.innerWidth;
-        
+        const heroHeading = document.querySelector("#hero h1");
+        const heroParagraph = document.querySelector("#hero p");
+
         if (viewportWidth <= 576) {
             heroHeading.style.fontSize = `${Math.max(18, viewportWidth * 0.05)}px`;
             heroParagraph.style.fontSize = `${Math.max(14, viewportWidth * 0.03)}px`;
         } else {
-            heroHeading.style.fontSize = ""; // Reset to CSS-defined styles
+            heroHeading.style.fontSize = "";
             heroParagraph.style.fontSize = "";
         }
     };
 
-    // Adjust on load and on resize
-    resizeText();
-    window.addEventListener("resize", resizeText);
+    adjustTextSize();
+    window.addEventListener("resize", adjustTextSize);
 });
 
-
-// Hero section buttons responsiveness
+// Animations for hero sectiom
 document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector(".hero-slider");
+    const slides = document.querySelectorAll(".hero-slider .slide");
+    const heading = document.querySelector("#hero h1");
+    const paragraph = document.querySelector("#hero p");
     const buttons = document.querySelectorAll("#hero .btn");
 
-    const resizeButtons = () => {
-        const viewportWidth = window.innerWidth;
+    let currentIndex = 0;
 
-        buttons.forEach((button) => {
-            if (viewportWidth <= 576) {
-                button.style.fontSize = `${Math.max(12, viewportWidth * 0.02)}px`;
-                button.style.padding = `${Math.max(8, viewportWidth * 0.01)}px ${Math.max(10, viewportWidth * 0.02)}px`;
-            } else {
-                button.style.fontSize = ""; // Reset to CSS-defined styles
-                button.style.padding = "";
+    const changeSlide = () => {
+        slides.forEach((slide, index) => {
+            slide.classList.remove("active");
+            if (index === currentIndex) {
+                slide.classList.add("active");
             }
         });
+
+        // Reset animations for text
+        heading.style.opacity = "0";
+        paragraph.style.opacity = "0";
+        buttons.forEach((button) => (button.style.opacity = "0"));
+
+        // Trigger text animations
+        setTimeout(() => {
+            heading.style.opacity = "1";
+            paragraph.style.opacity = "1";
+            buttons.forEach((button) => (button.style.opacity = "1"));
+        }, 500);
     };
 
-    // Adjust on load and on resize
-    resizeButtons();
-    window.addEventListener("resize", resizeButtons);
+    const startSlider = () => {
+        changeSlide();
+        currentIndex = (currentIndex + 1) % slides.length;
+        setTimeout(startSlider, 5000); // Slide interval
+    };
+
+    startSlider();
 });
 
+// Parallax scrolling for hero section 
+document.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const slides = document.querySelectorAll(".hero-slider .slide img");
+
+    slides.forEach((img) => {
+        img.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+    });
+});
+
+
+// Smooth Scroll Effect for Internal Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+});
+
+// Intersection Observer for Animations
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".fade-in-text, .fade-in-list li, .fade-in-button");
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = "running";
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+});
 
 
 
@@ -205,4 +264,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return regex.test(email);
     }
+});
+
+
+
+// Open and Close Modal
+function openDonateModal(type) {
+    const modal = document.getElementById('donate-modal');
+    modal.style.display = 'flex';
+    const title = document.querySelector('.modal-title');
+    title.textContent = type === 'one-time' ? 'One-Time Donation' : 'Monthly Support';
+}
+
+function closeDonateModal() {
+    const modal = document.getElementById('donate-modal');
+    modal.style.display = 'none';
+}
+
+// Handle Donation Form Submission
+document.getElementById('donation-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const amount = document.getElementById('donation-amount').value;
+    const method = document.getElementById('payment-method').value;
+    alert(`Thank you for your donation of $${amount} via ${method}!`);
+    closeDonateModal();
 });
