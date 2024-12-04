@@ -43,10 +43,7 @@ Copy code
 git clone https://github.com/your-username/friends-church-kabete.git
 Navigate to the Directory:
 
-bash
-Copy code
-cd friends-church-kabete
-Open the Project: Open the index.html file in your preferred web browser.
+
 
 Optional: To serve the website locally using a development server:
 
