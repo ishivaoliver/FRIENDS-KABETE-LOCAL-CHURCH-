@@ -11,6 +11,26 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
     });
 });
 
+
+// Dynamically resize fonts for better readability
+function adjustFontSize() {
+    const viewportWidth = window.innerWidth;
+
+    const headings = document.querySelectorAll('h1, h2, h3');
+    const paragraphs = document.querySelectorAll('p');
+    headings.forEach(heading => {
+        heading.style.fontSize = viewportWidth < 768 ? '1.5rem' : '2rem';
+    });
+    paragraphs.forEach(paragraph => {
+        paragraph.style.fontSize = viewportWidth < 768 ? '0.9rem' : '1rem';
+    });
+}
+
+// Call on load and resize
+window.addEventListener('resize', adjustFontSize);
+adjustFontSize();
+
+
 // 2. Navbar Collapse on Mobile after Clicking a Link
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarNav = document.querySelector('.navbar-collapse');
@@ -22,6 +42,24 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         }
     });
 });
+
+
+// Smooth scroll offset adjustment for fixed navbar
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+        const offset = document.querySelector('.navbar').offsetHeight || 70; // Adjust for navbar height
+        const topPosition = targetElement.offsetTop - offset;
+
+        window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
 
 // 3. Hero Section Background Image Fade In
 document.addEventListener("DOMContentLoaded", () => {
@@ -132,31 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => observer.observe(section));
 });
-
-
-
-// 4. Back to Top Button
-const backToTopBtn = document.createElement('button');
-backToTopBtn.innerHTML = '↑';
-backToTopBtn.classList.add('back-to-top');
-document.body.appendChild(backToTopBtn);
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
-        backToTopBtn.style.display = 'block';
-    } else {
-        backToTopBtn.style.display = 'none';
-    }
-});
-
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-
 
 
 // Sermons 
@@ -288,4 +301,28 @@ document.getElementById('donation-form').addEventListener('submit', function (e)
     const method = document.getElementById('payment-method').value;
     alert(`Thank you for your donation of $${amount} via ${method}!`);
     closeDonateModal();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("backToTop");
+
+    // Show/Hide Button on Scroll
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add("visible");
+            backToTopButton.classList.remove("hidden");
+        } else {
+            backToTopButton.classList.add("hidden");
+            backToTopButton.classList.remove("visible");
+        }
+    });
+
+    // Scroll to Top on Click
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 });
