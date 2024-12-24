@@ -1,5 +1,4 @@
 /* Global Styles */
-/* Reset some default styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -132,7 +131,7 @@ a:hover {
     }
 
     .navbar-brand .brand-name {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .navbar-toggler {
