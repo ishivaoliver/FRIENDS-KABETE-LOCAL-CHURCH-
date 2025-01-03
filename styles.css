@@ -1010,6 +1010,91 @@ section p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
+
+  /* Contact Section Social Media Styling */
+.contact-social {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-social h4 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .contact-social p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Social Media Buttons */
+  .contact-social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .contact-social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-social-btn i {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  /* Hover Effect */
+  .contact-social-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .contact-social-buttons {
+      flex-direction: column;
+    }
+  
+    .contact-social-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-social h4 {
+      font-size: 20px;
+    }
+  
+    .contact-social p {
+      font-size: 14px;
+    }
+  
+    .contact-social-btn {
+      font-size: 14px;
+    }
+  
+    .contact-social-btn i {
+      font-size: 18px;
+    }
+  }
+  
   
 
 /* Footer Styles */

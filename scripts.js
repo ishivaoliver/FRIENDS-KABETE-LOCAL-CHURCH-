@@ -335,6 +335,32 @@ adjustIframe();
 
 
 
+// Animate Social Buttons on Scroll
+const socialSection = document.querySelector('.contact-social');
+const socialButtons = document.querySelectorAll('.contact-social-btn');
+
+window.addEventListener('scroll', () => {
+  const sectionPosition = socialSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
+
+  if (sectionPosition < screenPosition) {
+    socialButtons.forEach((button, index) => {
+      setTimeout(() => {
+        button.style.transform = 'translateY(0)';
+        button.style.opacity = '1';
+      }, index * 150);
+    });
+  }
+});
+
+// Initial State for Animation
+socialButtons.forEach(button => {
+  button.style.transform = 'translateY(30px)';
+  button.style.opacity = '0';
+  button.style.transition = 'all 0.5s ease';
+});
+
+
 
     // Scroll to Top on Click
     backToTopButton.addEventListener("click", () => {
