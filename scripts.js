@@ -318,6 +318,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    window.addEventListener('resize', adjustIframe);
+
+function adjustIframe() {
+  const iframe = document.querySelector('.mt-4 iframe');
+  if (window.innerWidth < 768) {
+    iframe.style.height = '300px';
+  } else {
+    iframe.style.height = '400px';
+  }
+}
+
+// Initial call to set iframe size on load
+adjustIframe();
+
+
+
+
     // Scroll to Top on Click
     backToTopButton.addEventListener("click", () => {
         window.scrollTo({

@@ -969,6 +969,48 @@ section p {
     }
 }
 
+/* Responsive map iframe */
+.mt-4 {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  
+  .mt-4 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  /* Button styling */
+  .mt-3.text-center {
+    text-align: center;
+  }
+  
+  .mt-3 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .mt-3 .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+
+  .mt-3 .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
 
 /* Footer Styles */
 footer {
