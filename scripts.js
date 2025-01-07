@@ -159,7 +159,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Intersection Observer for Animations
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".fade-in-text, .fade-in-list li, .fade-in-button");
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -221,66 +221,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-// contact form 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    const nameField = document.getElementById('name');
-    const emailField = document.getElementById('email');
-    const subjectField = document.getElementById('subject');
-    const messageField = document.getElementById('message');
-
-    // Event listener for form submission
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        let valid = true;
-
-        // Clear previous error messages
-        document.querySelectorAll('.form-text').forEach(error => error.textContent = '');
-
-        // Name Validation
-        if (nameField.value.trim() === '') {
-            document.getElementById('nameError').textContent = 'Name is required.';
-            valid = false;
-        }
-
-        // Email Validation
-        if (!validateEmail(emailField.value.trim())) {
-            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
-            valid = false;
-        }
-
-        // Subject Validation
-        if (subjectField.value.trim() === '') {
-            document.getElementById('subjectError').textContent = 'Subject is required.';
-            valid = false;
-        }
-
-        // Message Validation
-        if (messageField.value.trim() === '') {
-            document.getElementById('messageError').textContent = 'Message cannot be empty.';
-            valid = false;
-        }
-
-        if (valid) {
-            // Submit form or perform AJAX request
-            alert('Message sent successfully!');
-            form.reset(); // Reset form on successful submission
-        }
-    });
-
-    // Email validation function
-    function validateEmail(email) {
-        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        return regex.test(email);
-    }
-});
-
-
-
 // Open and Close Modal
 function openDonateModal(type) {
     const modal = document.getElementById('donate-modal');
@@ -304,6 +244,35 @@ document.getElementById('donation-form').addEventListener('submit', function (e)
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Form validation
+    const form = document.querySelector('#contact form');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+        } else {
+            // Handle form submission
+            alert('Message sent successfully!');
+        }
+        form.classList.add('was-validated');
+    }, false);
+
+    // Smooth scroll for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            event.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            window.scroll({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const backToTopButton = document.getElementById("backToTop");
 
@@ -317,50 +286,6 @@ document.addEventListener("DOMContentLoaded", function () {
             backToTopButton.classList.remove("visible");
         }
     });
-
-
-    window.addEventListener('resize', adjustIframe);
-
-function adjustIframe() {
-  const iframe = document.querySelector('.mt-4 iframe');
-  if (window.innerWidth < 768) {
-    iframe.style.height = '300px';
-  } else {
-    iframe.style.height = '400px';
-  }
-}
-
-// Initial call to set iframe size on load
-adjustIframe();
-
-
-
-// Animate Social Buttons on Scroll
-const socialSection = document.querySelector('.contact-social');
-const socialButtons = document.querySelectorAll('.contact-social-btn');
-
-window.addEventListener('scroll', () => {
-  const sectionPosition = socialSection.getBoundingClientRect().top;
-  const screenPosition = window.innerHeight / 1.3;
-
-  if (sectionPosition < screenPosition) {
-    socialButtons.forEach((button, index) => {
-      setTimeout(() => {
-        button.style.transform = 'translateY(0)';
-        button.style.opacity = '1';
-      }, index * 150);
-    });
-  }
-});
-
-// Initial State for Animation
-socialButtons.forEach(button => {
-  button.style.transform = 'translateY(30px)';
-  button.style.opacity = '0';
-  button.style.transition = 'all 0.5s ease';
-});
-
-
 
     // Scroll to Top on Click
     backToTopButton.addEventListener("click", () => {
