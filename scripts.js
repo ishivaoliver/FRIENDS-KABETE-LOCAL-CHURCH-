@@ -4,8 +4,10 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
         window.scrollTo({
-            top: targetElement.offsetTop - 70,  // Adjusting for navbar height
+            top: targetElement.offsetTop - navbarHeight,
             behavior: 'smooth'
         });
     });
@@ -270,6 +272,33 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         form.classList.add('was-validated');
     }, false);
+
+    // Adjust iframe height dynamically based on screen size
+    function adjustMapHeight() {
+        const mapIframe = document.querySelector('.contact-section iframe');
+        const viewportWidth = window.innerWidth;
+
+        if (viewportWidth < 576) {
+            mapIframe.style.height = '200px';
+        } else {
+            mapIframe.style.height = '250px';
+        }
+    }
+
+    // Smooth scroll for 'Get Directions' button
+    document.querySelector('.btn-outline-primary').addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(e.target.href, '_blank');
+    });
+
+    // Call the map height adjustment function on load and resize
+    window.addEventListener('resize', adjustMapHeight);
+    adjustMapHeight();
+
+
+
+
+
 
     // Smooth scroll for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');

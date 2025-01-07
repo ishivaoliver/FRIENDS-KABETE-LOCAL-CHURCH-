@@ -50,6 +50,9 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  position: sticky;
+  top: 0; /* Ensures the navbar sticks to the top */
+  z-index: 1000; /* Ensures the navbar stays above other content */
 }
 
 .navbar:hover {
@@ -981,6 +984,104 @@ section p {
 
   form button {
     width: 100%;
+  }
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.contact-section h4 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contact-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.contact-section li strong {
+  margin-left: 5px;
+  color: #007bff;
+}
+
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.contact-section iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Social Media Buttons */
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-buttons a:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 20px 10px;
+  }
+
+  .contact-section h4 {
+    font-size: 18px;
+  }
+
+  .contact-section li {
+    font-size: 14px;
+  }
+
+  .social-buttons a {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .contact-section iframe {
+    height: 200px;
   }
 }
 
