@@ -170,7 +170,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => observer.observe(section));
 });
+// About section js
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.why-card');
 
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        });
+    });
+});
 
 // Sermons 
 
