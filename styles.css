@@ -744,6 +744,155 @@ section p {
   padding: 60px 0;
 }
 
+/* General Styles for the Testimonies Section */
+#testimonies {
+  background-image: url("assets/Local\ opening.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* Section Title */
+#testimonies h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#testimonies .text-center {
+  margin: 0 auto;
+}
+
+/* Video and Written Stories */
+#testimonies .row {
+  margin-top: 20px;
+}
+
+/* Video Section */
+#testimonies video {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Written Testimonies Card Style */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.card-img-top {
+  border-bottom: 2px solid #eee;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* Form Section */
+#testimony-form {
+  background: url("path/to/form-background-image.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+#testimony-form .form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+#testimony-form input,
+#testimony-form textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#testimony-form textarea {
+  resize: none;
+}
+
+/* Submit Button */
+#testimony-form button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#testimony-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  #testimonies h2 {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  #testimony-form {
+    margin-top: 30px;
+  }
+
+  #testimony-form input,
+  #testimony-form textarea {
+    font-size: 0.9rem;
+  }
+
+  #testimony-form button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #testimonies h2 {
+    font-size: 1.75rem;
+  }
+
+  #testimony-form {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  #testimony-form input,
+  #testimony-form textarea {
+    font-size: 0.85rem;
+  }
+
+  #testimony-form button {
+    width: 100%;
+  }
+}
+
 .card {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -759,6 +908,246 @@ section p {
   font-size: 3rem;
   color: #007bff;
   margin-bottom: 20px;
+}
+
+/* Ministries & Volunteer Opportunities Section */
+#ministries {
+  background-color: #f9f9f9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#ministries .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#ministries .section-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.ministry-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.ministry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ministry-card .ministry-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.ministry-card .ministry-title {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.ministry-card .ministry-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.ministry-card .btn-outline-primary {
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 2px solid #0056b3;
+  color: #0056b3;
+  transition: all 0.3s ease-in-out;
+}
+
+.ministry-card .btn-outline-primary:hover {
+  background-color: #0056b3;
+  color: #fff;
+  border: 2px solid #0056b3;
+}
+
+.volunteer-form .form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.volunteer-form .form-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.volunteer-form .form-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.volunteer-form .form-control {
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.volunteer-form .form-control:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
+}
+
+.volunteer-form select.form-control {
+  font-size: 1rem;
+}
+
+.volunteer-form button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.volunteer-form button:hover {
+  background-color: #218838;
+}
+
+/* Upcoming Volunteer Events */
+#ministries .events-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#ministries .events-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+#ministries .list-group-item {
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+#ministries .list-group-item:hover {
+  background-color: #f8f9fa;
+  border-color: #0056b3;
+}
+
+#ministries .badge-primary {
+  background-color: #0056b3;
+  border-radius: 50px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+}
+
+#ministries .badge-primary:hover {
+  background-color: #004085;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #ministries .ministry-card {
+    margin-bottom: 30px;
+  }
+
+  #ministries .ministry-title {
+    font-size: 1.5rem;
+  }
+
+  #ministries .ministry-description {
+    font-size: 0.9rem;
+  }
+
+  #ministries .volunteer-form .form-title {
+    font-size: 1.5rem;
+  }
+
+  #ministries .volunteer-form .form-description {
+    font-size: 1rem;
+  }
+
+  #ministries .events-title {
+    font-size: 1.5rem;
+  }
+
+  #ministries .events-description {
+    font-size: 1rem;
+  }
+
+  #ministries .list-group-item {
+    font-size: 1rem;
+  }
+
+  #ministries .badge-primary {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #ministries .section-title {
+    font-size: 2rem;
+  }
+
+  #ministries .section-description {
+    font-size: 1rem;
+  }
+
+  #ministries .ministry-title {
+    font-size: 1.3rem;
+  }
+
+  #ministries .ministry-description {
+    font-size: 0.8rem;
+  }
+
+  #ministries .volunteer-form .form-title {
+    font-size: 1.3rem;
+  }
+
+  #ministries .volunteer-form .form-description {
+    font-size: 0.9rem;
+  }
+
+  #ministries .events-title {
+    font-size: 1.3rem;
+  }
+
+  #ministries .events-description {
+    font-size: 0.9rem;
+  }
+
+  #ministries .list-group-item {
+    font-size: 0.9rem;
+  }
+
+  #ministries .badge-primary {
+    font-size: 0.7rem;
+  }
 }
 
 /* Team Section Styles */
@@ -879,7 +1268,7 @@ section p {
   }
 }
 
-/* General Styling */
+/* General Styling for dnation section */
 #donate {
   background: linear-gradient(to right, #ff7e5f, #feb47b);
   color: #ffffff;
@@ -983,6 +1372,228 @@ section p {
   }
 
   form button {
+    width: 100%;
+  }
+}
+
+/* Blog Section Styling */
+#blog {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+/* Blog Categories Buttons */
+.blog-categories {
+  margin-bottom: 30px;
+}
+
+.category-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.category-btn.active {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.category-btn:hover {
+  background-color: #2980b9;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Posts */
+.blog-post {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post .card-img-top {
+  max-height: 250px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.blog-post:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 15px 0;
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.blog-excerpt:hover {
+  color: #2980b9;
+}
+
+.blog-post .btn {
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.blog-post .btn:hover {
+  background-color: #2980b9;
+}
+
+.card-footer {
+  background-color: #f1f1f1;
+  padding: 15px;
+}
+
+.social-btn {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  transition: color 0.3s ease;
+}
+
+.social-btn:hover {
+  color: #2980b9;
+}
+
+.social-btn i {
+  margin-right: 8px;
+}
+
+/* Comment Section */
+.comment-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.comment-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.comment-form .form-label {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.comment-form .form-control {
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.comment-form .form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+.comment-form button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .blog-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .category-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .blog-post {
+    margin-bottom: 20px;
+  }
+
+  .blog-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-title {
+    font-size: 1.25rem;
+  }
+
+  .blog-excerpt {
+    font-size: 0.875rem;
+  }
+
+  .comment-section {
+    padding: 30px;
+  }
+
+  .comment-form button {
     width: 100%;
   }
 }

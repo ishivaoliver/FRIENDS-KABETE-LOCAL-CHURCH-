@@ -229,6 +229,71 @@ document.addEventListener('DOMContentLoaded', function () {
     filterSermons();
 });
 
+// Wait until the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Select the testimony form
+    const form = document.getElementById('testimony-form');
+
+    // Add an event listener to handle form submission
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the default form submission (refreshing the page)
+
+        // Get the values of the form fields
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const video = document.getElementById('video').files[0]; // Get the selected video file (if any)
+
+        // Basic validation: Check if required fields are filled
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all the required fields.");
+            return; // Stop further execution if any required field is empty
+        }
+
+        // Optional: Validate the video file size (example: max 10MB)
+        if (video && video.size > 10 * 1024 * 1024) {
+            alert("File size exceeds 10MB. Please upload a smaller file.");
+            return; // Stop further execution if the file is too large
+        }
+
+        // If all validation passes, show a success message (in a real app, you would send data to the server)
+        alert("Thank you for your testimony! We will review it shortly.");
+
+        // Reset the form after submission (optional)
+        form.reset();
+    });
+
+    // Select the video input element
+    const videoInput = document.getElementById('video');
+    // Create a span element to display the name of the selected video file
+    const videoLabel = document.createElement('span');
+    videoInput.parentNode.appendChild(videoLabel); // Append the label to the parent element
+
+    // Add an event listener to the video input field
+    videoInput.addEventListener('change', function () {
+        // If a video file is selected, display the file name
+        if (this.files && this.files[0]) {
+            videoLabel.textContent = `Selected file: ${this.files[0].name}`;
+        } else {
+            videoLabel.textContent = ""; // Clear the label if no file is selected
+        }
+    });
+
+    // Optional: Smooth scroll functionality for a button or link to scroll to the form
+    const scrollToFormButton = document.getElementById('scroll-to-form');
+    if (scrollToFormButton) {
+        // Add event listener to the scroll-to-form button
+        scrollToFormButton.addEventListener('click', function () {
+            // Smooth scroll to the testimony form with an offset (e.g., for a fixed header)
+            window.scrollTo({
+                top: form.offsetTop - 50, // Scroll to the form, minus 50px offset
+                behavior: 'smooth' // Enable smooth scrolling
+            });
+        });
+    }
+});
+
 
 
 // Events section 

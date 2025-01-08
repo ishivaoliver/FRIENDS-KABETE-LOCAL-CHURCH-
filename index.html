@@ -426,11 +426,89 @@
       </div>
     </div>
   </section>
-  
+<!-- Testimonies and Stories -->
+<section id="testimonies" class="container my-5">
+  <h2 class="text-center mb-4">Testimonies & Stories</h2>
+
+  <!-- Video Testimonies -->
+  <div class="row my-4">
+    <div class="col-md-6">
+      <video controls class="w-100 rounded shadow">
+        <source src="path/to/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="col-md-6">
+      <h3 class="h4">Member's Story</h3>
+      <p class="text-muted">Short description of the video testimony. This can highlight the key message shared in the video.</p>
+    </div>
+  </div>
+
+  <!-- Written Stories with Images -->
+  <div class="row my-4">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="path/to/image.jpg" alt="Story Image" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h3 class="h5 card-title">Member's Story</h3>
+          <p class="card-text">Short description of the written testimony. Share insights into the personal experience or transformation.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat the structure for more stories -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="path/to/image2.jpg" alt="Story Image" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h3 class="h5 card-title">Another Member's Story</h3>
+          <p class="card-text">A brief insight into another individual's journey and transformation.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="path/to/image3.jpg" alt="Story Image" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h3 class="h5 card-title">Testimony Title</h3>
+          <p class="card-text">A brief description to capture the attention of the reader about this story.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submission Form -->
+  <div class="row my-4">
+    <div class="col-md-12">
+      <h3 class="h4">Submit Your Story</h3>
+      <form id="testimony-form" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" required placeholder="Enter your full name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" required placeholder="Enter your email address">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Story</label>
+          <textarea class="form-control" id="message" rows="5" required placeholder="Share your testimony here..."></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="video" class="form-label">Upload Video (Optional)</label>
+          <input type="file" class="form-control" id="video" accept="video/*">
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Submit Testimony</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
   <!-- Events Section -->
 <section id="events" class="py-5 bg-light">
-    <div class="container">
+   <div < class="container">
       <!-- Section Header -->
       <div class="text-center mb-5">
         <h2 class="text-primary">Upcoming Events</h2>
@@ -486,6 +564,136 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Ministries & Volunteer Opportunities Section -->
+<section id="ministries" class="ministries-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Ministries & Volunteer Opportunities</h2>
+    <p class="section-description text-center mb-5">Explore our diverse ministries and discover how you can serve our community. Your involvement will help us make a lasting impact!</p>
+
+    <!-- Ministries List -->
+    <div class="row mt-5">
+      <!-- Sunday School Ministry -->
+      <div class="col-md-4 mb-4">
+        <div class="ministry-card p-4 shadow-lg hover-shadow text-center">
+          <img src="path/to/sunday-school-image.jpg" alt="Sunday School" class="ministry-img mb-3">
+          <h3 class="ministry-title text-primary">Sunday School</h3>
+          <p class="ministry-description">Teaching children foundational biblical principles in a fun and engaging way.</p>
+          <a href="#sunday-school" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+
+      <!-- NYAFP Ministry -->
+      <div class="col-md-4 mb-4">
+        <div class="ministry-card p-4 shadow-lg hover-shadow text-center">
+          <img src="path/to/nyafp-image.jpg" alt="NYAFP" class="ministry-img mb-3">
+          <h3 class="ministry-title text-primary">NYAFP</h3>
+          <p class="ministry-description">Empowering young adults through faith, leadership, and community service.</p>
+          <a href="#nyafp" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+
+      <!-- QCM Ministry -->
+      <div class="col-md-4 mb-4">
+        <div class="ministry-card p-4 shadow-lg hover-shadow text-center">
+          <img src="path/to/qcm-image.jpg" alt="QCM" class="ministry-img mb-3">
+          <h3 class="ministry-title text-primary">QCM</h3>
+          <p class="ministry-description">Fostering spiritual growth and community outreach through impactful programs.</p>
+          <a href="#qcm" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+
+      <!-- USFW Ministry -->
+      <div class="col-md-4 mb-4">
+        <div class="ministry-card p-4 shadow-lg hover-shadow text-center">
+          <img src="path/to/usfw-image.jpg" alt="USFW" class="ministry-img mb-3">
+          <h3 class="ministry-title text-primary">USFW</h3>
+          <p class="ministry-description">Supporting women in faith through fellowship, advocacy, and outreach efforts.</p>
+          <a href="#usfw" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Quaker Men Ministry -->
+      <div class="col-md-4 mb-4">
+        <div class="ministry-card p-4 shadow-lg hover-shadow text-center">
+          <img src="path/to/quaker-men-image.jpg" alt="Quaker Men" class="ministry-img mb-3">
+          <h3 class="ministry-title text-primary">Quaker Men</h3>
+          <p class="ministry-description">Men of faith coming together to serve others and strengthen their relationship with God.</p>
+          <a href="#quaker-men" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Main Church Local Outreach Ministry -->
+      <div class="col-md-4 mb-4">
+        <div class="ministry-card p-4 shadow-lg hover-shadow text-center">
+          <img src="path/to/main-church-local-outreach-image.jpg" alt="Main Church Local Outreach" class="ministry-img mb-3">
+          <h3 class="ministry-title text-primary">Local Outreach</h3>
+          <p class="ministry-description">Reaching out to our community with love and service through local initiatives.</p>
+          <a href="#local-outreach" class="btn btn-outline-primary mt-3">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Volunteer Sign-Up Form -->
+    <div class="row mt-5">
+      <div class="col-md-12 text-center">
+        <h3 class="form-title text-secondary">Become a Volunteer</h3>
+        <p class="form-description mb-4">Join our volunteer team and make a meaningful difference. Choose your ministry and fill out the form to get involved!</p>
+        <form id="volunteer-form" class="volunteer-form">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="volunteer-name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="volunteer-name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="volunteer-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="volunteer-email" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="volunteer-ministry" class="form-label">Preferred Ministry</label>
+            <select class="form-control" id="volunteer-ministry" required>
+              <option value="">Select Ministry</option>
+              <option value="Sunday School">Sunday School</option>
+              <option value="NYAFP">NYAFP</option>
+              <option value="QCM">QCM</option>
+              <option value="USFW">USFW</option>
+              <option value="Quaker Men">Quaker Men</option>
+              <option value="Local Outreach">Local Outreach</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Upcoming Volunteer Events -->
+    <div class="row mt-5">
+      <div class="col-md-12 text-center">
+        <h3 class="events-title text-secondary">Upcoming Volunteer Events</h3>
+        <p class="events-description mb-4">Stay informed about the latest volunteer events happening at our church. Come join us and make an impact!</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <strong>Community Clean-Up</strong> - January 15, 2025
+            <span class="badge badge-primary float-right">RSVP Now</span>
+          </li>
+          <li class="list-group-item">
+            <strong>Food Drive</strong> - February 10, 2025
+            <span class="badge badge-primary float-right">RSVP Now</span>
+          </li>
+          <li class="list-group-item">
+            <strong>Youth Outreach Program</strong> - March 5, 2025
+            <span class="badge badge-primary float-right">RSVP Now</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   
 
 <!-- Church Leaders Profiles Section -->
@@ -615,7 +823,7 @@
 </div>
 
 
-      <!-- Call to Action -->
+      <!-- Call to Action
       <div class="text-center mt-5">
         <h4 class="text-secondary">Don’t Miss Out</h4>
         <p>
@@ -623,7 +831,7 @@
         </p>
         <a href="#newsletter" class="btn btn-primary">Subscribe to Newsletter</a>
       </div>
-    </div>
+    </div> -->
   </section>
   
 
@@ -692,6 +900,120 @@
       </div>
   </div>
 </section>
+
+
+<!-- Blog Section -->
+<section id="blog" class="blog-section py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title text-uppercase font-weight-bold">Blog</h2>
+      <p class="section-description text-muted">Stay updated with the latest insights, updates, and spiritual content from our church community.</p>
+    </div>
+
+    <!-- Blog Categories (Responsive buttons with hover effects) -->
+    <div class="blog-categories text-center mb-4">
+      <button class="btn btn-outline-primary mx-1 category-btn active" data-category="all">All</button>
+      <button class="btn btn-outline-primary mx-1 category-btn" data-category="faith">Faith</button>
+      <button class="btn btn-outline-primary mx-1 category-btn" data-category="community">Community</button>
+      <button class="btn btn-outline-primary mx-1 category-btn" data-category="events">Events</button>
+      <!-- Add more categories as needed -->
+    </div>
+
+    <!-- Blog Posts -->
+    <div class="row blog-posts">
+      <!-- Blog Post 1 -->
+      <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="faith">
+        <div class="blog-post card shadow-sm border-0">
+          <img src="assets/blog1.jpg" alt="Blog Image" class="card-img-top img-fluid rounded">
+          <div class="card-body">
+            <h3 class="blog-title font-weight-bold">The Power of Faith in Our Lives</h3>
+            <p class="blog-excerpt text-muted">Explore how faith transforms our lives and brings us closer to God's purpose...</p>
+            <a href="blog-post.html" class="btn btn-primary btn-block">Read More</a>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="community">
+        <div class="blog-post card shadow-sm border-0">
+          <img src="assets/blog2.jpg" alt="Blog Image" class="card-img-top img-fluid rounded">
+          <div class="card-body">
+            <h3 class="blog-title font-weight-bold">Building Stronger Communities</h3>
+            <p class="blog-excerpt text-muted">Learn how our church is involved in fostering deeper connections and a sense of community...</p>
+            <a href="blog-post.html" class="btn btn-primary btn-block">Read More</a>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="events">
+        <div class="blog-post card shadow-sm border-0">
+          <img src="assets/blog3.jpg" alt="Blog Image" class="card-img-top img-fluid rounded">
+          <div class="card-body">
+            <h3 class="blog-title font-weight-bold">Upcoming Church Events</h3>
+            <p class="blog-excerpt text-muted">Stay updated with our upcoming events and get involved in the community...</p>
+            <a href="blog-post.html" class="btn btn-primary btn-block">Read More</a>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="comment-section mt-5">
+      <h3 class="comment-title font-weight-bold">Leave a Comment</h3>
+      <form id="comment-form" class="comment-form">
+        <div class="mb-3">
+          <label for="comment-name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="comment-name" required>
+        </div>
+        <div class="mb-3">
+          <label for="comment-email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="comment-email" required>
+        </div>
+        <div class="mb-3">
+          <label for="comment-message" class="form-label">Comment</label>
+          <textarea class="form-control" id="comment-message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
 
 
