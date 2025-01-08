@@ -1598,6 +1598,151 @@ section p {
   }
 }
 
+/* General Styling */
+.faq-section {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
+.faq-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 35px;
+}
+
+.faq-section .accordion-button {
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 15px;
+  text-align: left;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.faq-section .accordion-button:hover {
+  background-color: #e9ecef;
+  border-color: #007bff;
+}
+
+.faq-section .accordion-body {
+  background-color: #fff;
+  color: #495057;
+  border-top: 1px solid #dee2e6;
+  padding: 20px 30px;
+  font-size: 1rem;
+  line-height: 1.7;
+  border-radius: 0 0 8px 8px;
+}
+
+.faq-section .accordion-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.faq-section .accordion-body li {
+  margin-bottom: 15px;
+}
+
+.faq-section .accordion-body li strong {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.faq-section .accordion-item + .accordion-item {
+  margin-top: 15px;
+}
+
+.faq-section .accordion-header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .faq-section .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .faq-section .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 40px 15px;
+  }
+
+  .faq-section .section-title {
+    font-size: 1.8rem;
+  }
+
+  .faq-section .accordion-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .faq-section .accordion-body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 567px) {
+  .faq-section .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .faq-section .accordion-button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .faq-section .accordion-body {
+    font-size: 0.9rem;
+  }
+
+  .faq-section .accordion-body li {
+    margin-bottom: 12px;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Touch-Friendly Enhancements */
+@media (pointer: coarse) {
+  .faq-section .accordion-button {
+    font-size: 1.2rem;
+    padding: 18px;
+  }
+
+  .faq-section .accordion-body {
+    font-size: 1.1rem;
+  }
+
+  .faq-section .accordion-item {
+    margin-top: 20px;
+  }
+}
+
 /* Contact Section Styling */
 .contact-section {
   padding: 40px 20px;
