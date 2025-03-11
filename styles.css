@@ -156,10 +156,11 @@ a:hover {
   position: relative;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 .hero-video {
@@ -178,99 +179,60 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.8)
-  );
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
-.text-container {
+.hero-content {
   z-index: 2;
-  max-width: 750px;
-  text-align: left;
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  padding: 20px;
 }
 
 #hero h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  opacity: 0;
-  animation: fadeInUp 1.5s ease-in-out 0.3s forwards;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 #hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 20px auto;
+  max-width: 600px;
   line-height: 1.6;
-  max-width: 80%;
-  opacity: 0;
-  animation: fadeInUp 1.5s ease-in-out 0.6s forwards;
 }
 
 #hero .btn {
-  padding: 12px 24px;
+  padding: 12px 30px;
   font-size: 1.2rem;
   border-radius: 50px;
-  opacity: 0;
-  animation: fadeInUp 1.5s ease-in-out 0.9s forwards;
 }
 
 #hero .btn-light {
   background-color: #ffffff;
-  color: #007bff;
-  border: 1px solid #ffffff;
-}
-
-#hero .btn-light:hover {
-  background-color: #f1f1f1;
-  color: #0056b3;
-}
-
-#hero .btn-primary {
-  background-color: #007bff;
+  color: #000;
   border: none;
 }
 
-#hero .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-#hero .btn-outline-light {
-  color: #ffffff;
-  border: 1px solid #ffffff;
-}
-
-#hero .btn-outline-light:hover {
-  background-color: #ffffff;
+#hero .btn-light:hover {
+  background-color: #f8f9fa;
   color: #007bff;
-}
-
-/* Fade-in animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   #hero p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   #hero .btn {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 10px 25px;
   }
 }
 
