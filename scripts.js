@@ -63,90 +63,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// 3. Hero Section Background Image Fade In
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".hero-slider");
-    const slides = document.querySelectorAll(".hero-slider .slide");
-    let currentIndex = 0;
-
-    const changeSlide = () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    };
-
-    // Auto-slide every 5 seconds
-    setInterval(changeSlide, 5000);
-
-    // Ensure text responsiveness on resize
-    const adjustTextSize = () => {
-        const viewportWidth = window.innerWidth;
-        const heroHeading = document.querySelector("#hero h1");
-        const heroParagraph = document.querySelector("#hero p");
-
-        if (viewportWidth <= 576) {
-            heroHeading.style.fontSize = `${Math.max(18, viewportWidth * 0.05)}px`;
-            heroParagraph.style.fontSize = `${Math.max(14, viewportWidth * 0.03)}px`;
-        } else {
-            heroHeading.style.fontSize = "";
-            heroParagraph.style.fontSize = "";
-        }
-    };
-
-    adjustTextSize();
-    window.addEventListener("resize", adjustTextSize);
-});
-
-// Animations for hero sectiom
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".hero-slider");
-    const slides = document.querySelectorAll(".hero-slider .slide");
-    const heading = document.querySelector("#hero h1");
-    const paragraph = document.querySelector("#hero p");
-    const buttons = document.querySelectorAll("#hero .btn");
-
-    let currentIndex = 0;
-
-    const changeSlide = () => {
-        slides.forEach((slide, index) => {
-            slide.classList.remove("active");
-            if (index === currentIndex) {
-                slide.classList.add("active");
-            }
-        });
-
-        // Reset animations for text
-        heading.style.opacity = "0";
-        paragraph.style.opacity = "0";
-        buttons.forEach((button) => (button.style.opacity = "0"));
-
-        // Trigger text animations
-        setTimeout(() => {
-            heading.style.opacity = "1";
-            paragraph.style.opacity = "1";
-            buttons.forEach((button) => (button.style.opacity = "1"));
-        }, 500);
-    };
-
-    const startSlider = () => {
-        changeSlide();
-        currentIndex = (currentIndex + 1) % slides.length;
-        setTimeout(startSlider, 5000); // Slide interval
-    };
-
-    startSlider();
-});
-
-// Parallax scrolling for hero section 
-document.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const slides = document.querySelectorAll(".hero-slider .slide img");
-
-    slides.forEach((img) => {
-        img.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-    });
-});
-
-
 // Smooth Scroll Effect for Internal Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
@@ -158,9 +74,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for Animations
+// Parallax scrolling for video background
+document.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const video = document.querySelector(".hero-video");
+    video.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+});
+
+// Intersection Observer for Smooth Fade-in Animations
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".fade-in-text, .fade-in-list li, .fade-in-button");
+    const elements = document.querySelectorAll("#hero h1, #hero p, #hero .btn");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -170,8 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, { threshold: 0.2 });
 
-    sections.forEach(section => observer.observe(section));
+    elements.forEach(element => observer.observe(element));
 });
+
 // About section js
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.why-card');

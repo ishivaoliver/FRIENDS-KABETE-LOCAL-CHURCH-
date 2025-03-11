@@ -1,4 +1,11 @@
 /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Open Sans", sans-serif;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
