@@ -74,27 +74,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax scrolling for video background
-document.addEventListener("scroll", () => {
-    const scrollPosition = window.scrollY;
-    const video = document.querySelector(".hero-video");
-    video.style.transform = `translateY(${scrollPosition * 0.2}px)`;
-});
 
-// Intersection Observer for Smooth Fade-in Animations
+// Hero section js 
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll("#hero h1, #hero p, #hero .btn");
+    // Add animation effect on page load
+    document.querySelectorAll(".animate-fade").forEach((element) => {
+        element.classList.add("fade-in-active");
+    });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = "running";
-            }
+    // Optional: Customize carousel speed
+    const carousel = document.querySelector("#myCarousel");
+    carousel.addEventListener("slid.bs.carousel", () => {
+        // Reset animations for new active slide
+        document.querySelectorAll(".animate-fade").forEach((element) => {
+            element.classList.remove("fade-in-active");
+            setTimeout(() => {
+                element.classList.add("fade-in-active");
+            }, 300);
         });
-    }, { threshold: 0.2 });
-
-    elements.forEach(element => observer.observe(element));
+    });
 });
+
 
 // About section js
 document.addEventListener('DOMContentLoaded', function () {

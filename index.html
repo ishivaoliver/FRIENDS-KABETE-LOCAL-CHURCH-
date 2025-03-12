@@ -88,28 +88,67 @@
     </div>
   </nav>
   
-  <!-- Hero Section -->
-<section id="hero" class="position-relative">
-  <video autoplay loop muted playsinline class="hero-video">
-      <source src="assets/Landing page kabete.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-  </video>
 
-  <div class="overlay"></div>
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
 
-  <div class="container text-white hero-content text-start">
-      <h1 class="fw-bold">WELCOME TO FRIENDS CHURCH QUAKERS KABETE</h1>
-      
-      <p class="lead">
-          Your spiritual home of faith and love.  
-          Whether you're seeking a deeper connection with God,  
-          a supportive community, or a fresh start, you belong here.
-          
-      </p>
+    <!-- Carousel Inner -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="assets/Kabete Background 1.jpg" class="d-block w-100" alt="Church Worship">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <h1 class="animate-fade">Welcome to Friends Church Quakers Kabete</h1>
+          <p class="animate-fade delay-1">Experience the presence of God through worship, fellowship, and service.</p>
+          <p><a class="btn btn-lg btn-light glass-button" href="#">Join Our Community</a></p>
+        </div>
+      </div>
 
-      <a href="#services" class="btn btn-light btn-lg shadow rounded-pill">Explore Our Services</a>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="assets/Kabete background image 2.jpg" class="d-block w-100" alt="Community Service">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <h1 class="animate-fade">Serving with Love</h1>
+          <p class="animate-fade delay-1">Be the hands and feet of Jesus. Join us in serving the community.</p>
+          <p><a class="btn btn-lg btn-light glass-button" href="#">Volunteer Now</a></p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="assets/PULL PIT.jpg" class="d-block w-100" alt="Bible Study">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <h1 class="animate-fade">Grow in Faith</h1>
+          <p class="animate-fade delay-1">Join our Bible studies and discover the deeper meaning of God's word.</p>
+          <p><a class="btn btn-lg btn-light glass-button" href="#">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>
+
+
+
 
 
 
@@ -820,122 +859,220 @@
 </section>
 
 
-<!-- Blog Section -->
-<section id="blog" class="blog-section py-5">
-  <div class="container">
-    <!-- Section Header -->
-    <div class="section-header text-center mb-5">
-      <h2 class="section-title text-uppercase font-weight-bold">Blog</h2>
-      <p class="section-description text-muted">Stay updated with the latest insights, updates, and spiritual content from our church community.</p>
-    </div>
-
-    <!-- Blog Categories (Responsive buttons with hover effects) -->
-    <div class="blog-categories text-center mb-4">
-      <button class="btn btn-outline-primary mx-1 category-btn active" data-category="all">All</button>
-      <button class="btn btn-outline-primary mx-1 category-btn" data-category="faith">Faith</button>
-      <button class="btn btn-outline-primary mx-1 category-btn" data-category="community">Community</button>
-      <button class="btn btn-outline-primary mx-1 category-btn" data-category="events">Events</button>
-      <!-- Add more categories as needed -->
-    </div>
-
-    <!-- Blog Posts -->
-    <div class="row blog-posts">
-      <!-- Blog Post 1 -->
-      <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="faith">
-        <div class="blog-post card shadow-sm border-0">
-          <img src="assets/Local opening.jpg" alt="Blog Image" class="card-img-top img-fluid rounded">
-          <div class="card-body">
-            <h3 class="blog-title font-weight-bold">The Power of Faith in Our Lives</h3>
-            <p class="blog-excerpt text-muted">Explore how faith transforms our lives and brings us closer to God's purpose...</p>
-            <a href="blog-post.html" class="btn btn-primary btn-block">Read More</a>
-          </div>
-          <div class="card-footer text-center">
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post 2 -->
-      <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="community">
-        <div class="blog-post card shadow-sm border-0">
-          <img src="assets/About us background.jpg" alt="Blog Image" class="card-img-top img-fluid rounded">
-          <div class="card-body">
-            <h3 class="blog-title font-weight-bold">Building Stronger Communities</h3>
-            <p class="blog-excerpt text-muted">Learn how our church is involved in fostering deeper connections and a sense of community...</p>
-            <a href="blog-post.html" class="btn btn-primary btn-block">Read More</a>
-          </div>
-          <div class="card-footer text-center">
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post 3 -->
-      <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="events">
-        <div class="blog-post card shadow-sm border-0">
-          <img src="assets/Pulpit.jpg" alt="Blog Image" class="card-img-top img-fluid rounded">
-          <div class="card-body">
-            <h3 class="blog-title font-weight-bold">Upcoming Church Events</h3>
-            <p class="blog-excerpt text-muted">Stay updated with our upcoming events and get involved in the community...</p>
-            <a href="blog-post.html" class="btn btn-primary btn-block">Read More</a>
-          </div>
-          <div class="card-footer text-center">
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Facebook">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="btn btn-sm btn-outline-secondary mx-1 social-btn" aria-label="Share on Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Comment Section -->
-    <div class="comment-section mt-5">
-      <h3 class="comment-title font-weight-bold">Leave a Comment</h3>
-      <form id="comment-form" class="comment-form">
-        <div class="mb-3">
-          <label for="comment-name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="comment-name" required>
-        </div>
-        <div class="mb-3">
-          <label for="comment-email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="comment-email" required>
-        </div>
-        <div class="mb-3">
-          <label for="comment-message" class="form-label">Comment</label>
-          <textarea class="form-control" id="comment-message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+<div class="container mt-4">
+  <!-- Featured Header -->
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <div class="col-lg-6 px-0">
+      <h1 class="display-4 fst-italic">Welcome to Grace Church Blog</h1>
+      <p class="lead my-3">
+        Experience the love, hope, and fellowship of our community. Join us as we share inspirational messages, heartfelt stories, and updates on our ministry.
+      </p>
+      <p class="lead mb-0">
+        <a href="#" class="text-body-emphasis fw-bold">Discover more...</a>
+      </p>
     </div>
   </div>
-</section>
 
+  <!-- Two Featured Posts -->
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Faith</strong>
+          <h3 class="mb-0">Sunday Sermon</h3>
+          <div class="mb-1 text-body-secondary">Jan 07</div>
+          <p class="card-text mb-auto">
+            Join us this Sunday for a powerful message on love and redemption, inspiring us to live with grace.
+          </p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            Read more
+            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sermon Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Sermon Thumbnail</title>
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Sermon</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success-emphasis">Community</strong>
+          <h3 class="mb-0">Outreach &amp; Events</h3>
+          <div class="mb-1 text-body-secondary">Jan 06</div>
+          <p class="mb-auto">
+            Discover our upcoming community outreach programs and events, where we come together to serve and uplift one another.
+          </p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+            Read more
+            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+          </a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Event Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Event Thumbnail</title>
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Event</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Blog Posts and Sidebar -->
+  <div class="row g-5">
+    <!-- Blog Posts -->
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">Messages from the Pulpit</h3>
 
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Sunday Service Highlights</h2>
+        <p class="blog-post-meta">January 1, 2024 by Pastor Mark</p>
+        <p>
+          Our recent Sunday service was filled with uplifting hymns, heartfelt prayers, and an inspiring sermon on forgiveness. We invite you to relive the moments and share your thoughts.
+        </p>
+        <hr>
+        <p>
+          Experience the warmth of our community and the transformative power of faith. Every service brings us closer to understanding God's grace.
+        </p>
+        <h2>Scripture Reflection</h2>
+        <p>
+          "For I know the plans I have for you," declares the LORD, "plans to prosper you and not to harm you, plans to give you hope and a future."
+        </p>
+        <blockquote class="blockquote">
+          <p>Trust in His plan, even when the road seems uncertain.</p>
+        </blockquote>
+        <p>
+          We continue to explore these themes in our weekly gatherings and encourage you to join us for deeper reflection and discussion.
+        </p>
+        <h3>Service Highlights</h3>
+        <ul>
+          <li>Inspirational opening hymn</li>
+          <li>Engaging sermon with real-life stories</li>
+          <li>Community prayer and fellowship</li>
+        </ul>
+        <p>
+          We look forward to welcoming you at our next service. Stay blessed and keep the faith!
+        </p>
+      </article>
 
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">Community Outreach Update</h2>
+        <p class="blog-post-meta">December 23, 2023 by Sister Jacob</p>
+        <p>
+          Our outreach program reached new heights last month with numerous community members receiving support and care. We are grateful for the volunteers who make it possible.
+        </p>
+        <blockquote>
+          <p>"Love thy neighbor as thyself." – A call to action for all of us.</p>
+        </blockquote>
+        <p>
+          The success of our programs reminds us that every act of kindness makes a difference. We continue to plan more events to serve those in need.
+        </p>
+        <h3>Event Recap</h3>
+        <p>
+          A community potluck, a charity drive, and a local support group meeting were among the highlights. Your participation is what makes our mission possible.
+        </p>
+      </article>
 
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">New Church Initiative: Prayer Hotline</h2>
+        <p class="blog-post-meta">December 14, 2023 by Pastor Chris</p>
+        <p>
+          We are excited to announce our new prayer hotline service. This initiative aims to provide immediate spiritual support and prayer assistance to anyone in need.
+        </p>
+        <ul>
+          <li>Reach out for prayer assistance</li>
+          <li>Speak directly with our ministry team</li>
+          <li>Find comfort and guidance</li>
+        </ul>
+        <p>
+          Stay tuned for more details on how to connect with our team and share your prayer requests. Your faith is our priority.
+        </p>
+      </article>
+
+      <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">About Our Church</h4>
+          <p class="mb-0">
+            Grace Church is a community of believers dedicated to spreading love, hope, and compassion. We welcome everyone to join our journey of faith.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent Sermons</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Inspiring Worship</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Message of Hope</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#777"></rect>
+                </svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Community Gathering</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2024</a></li>
+            <li><a href="#">February 2024</a></li>
+            <li><a href="#">January 2024</a></li>
+            <li><a href="#">December 2023</a></li>
+            <li><a href="#">November 2023</a></li>
+            <li><a href="#">October 2023</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
