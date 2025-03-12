@@ -6,51 +6,6 @@
   font-family: "Poppins", "Open Sans", sans-serif;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Section Spacing for Smaller Screens */
-section {
-  padding: 40px 10px;
-}
-
-/* Responsive Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  word-wrap: break-word;
-}
-
-p {
-  word-wrap: break-word;
-}
-
-/* Responsive Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #007bff;
-}
-
 /* General Navbar Styling */
 .navbar {
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
