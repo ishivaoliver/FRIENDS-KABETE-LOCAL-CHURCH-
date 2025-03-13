@@ -368,4 +368,88 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Chat widget 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const chatToggle = document.getElementById("chat-toggle");
+    const chatBox = document.getElementById("chat-box");
+    const closeChat = document.getElementById("close-chat");
+    const sendMessage = document.getElementById("send-message");
+    const chatInput = document.getElementById("chat-input");
+    const chatBody = document.getElementById("chat-body");
+
+    // Open chat with animation
+    chatToggle.addEventListener("click", function () {
+        chatBox.style.display = "flex";
+        setTimeout(() => {
+            chatBox.style.opacity = "1";
+            chatBox.style.transform = "translateY(0)";
+        }, 100);
+    });
+
+    // Close chat
+    closeChat.addEventListener("click", function () {
+        chatBox.style.opacity = "0";
+        chatBox.style.transform = "translateY(10px)";
+        setTimeout(() => {
+            chatBox.style.display = "none";
+        }, 300);
+    });
+
+    // Send message
+    sendMessage.addEventListener("click", function () {
+        if (chatInput.value.trim() !== "") {
+            let userMessage = document.createElement("div");
+            userMessage.classList.add("chat-message", "user-message");
+            userMessage.textContent = chatInput.value;
+            chatBody.appendChild(userMessage);
+            chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll to the latest message
+            chatInput.value = "";
+        }
+    });
+
+    // Send message on Enter key press
+    chatInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            sendMessage.click();
+        }
+    });
+});
+
+
+// Whatsup floating button 
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappBtn = document.getElementById("whatsapp-btn");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            whatsappBtn.style.display = "flex";
+        } else {
+            whatsappBtn.style.display = "none";
+        }
+    });
+});
+
+
+
+// Back to top button 
+document.addEventListener("DOMContentLoaded", function () {
+    const backToTopButton = document.getElementById("back-to-top");
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add("show");
+        } else {
+            backToTopButton.classList.remove("show");
+        }
+    });
+
+    // Scroll to top when button is clicked
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+});
