@@ -111,8 +111,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-// Hero section js 
+// Hero section 
 document.addEventListener("DOMContentLoaded", function () {
     var carousel = document.getElementById("carouselExampleFade");
 
@@ -123,13 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-// About section js
+// About section JS - Adds hover effect on cards
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.why-card');
 
-    cards.forEach(card => {
+    cards.forEach((card) => {
         card.addEventListener('mouseenter', () => {
             card.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)';
         });
@@ -139,6 +136,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Smooth Scroll for Links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+});
+
 
 // Sermons 
 
