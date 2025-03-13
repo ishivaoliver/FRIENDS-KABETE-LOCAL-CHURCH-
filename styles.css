@@ -167,6 +167,84 @@
   }
 }
 
+/* Hero section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+/* Ensures hero content stays on top of the carousel */
+.hero-content {
+  position: absolute;
+  /* height: 100vh;  */
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 45%;
+  color: white;
+  z-index: 10;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons Styling */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+/* Dark overlay for better text visibility */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    left: 5%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
 /* About Section */
 #about {
   position: relative;

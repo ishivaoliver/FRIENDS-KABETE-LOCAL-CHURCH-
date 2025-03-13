@@ -113,24 +113,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // Hero section js 
-document.addEventListener("DOMContentLoaded", () => {
-    // Add animation effect on page load
-    document.querySelectorAll(".animate-fade").forEach((element) => {
-        element.classList.add("fade-in-active");
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    var carousel = document.getElementById("carouselExampleFade");
 
-    // Optional: Customize carousel speed
-    const carousel = document.querySelector("#myCarousel");
-    carousel.addEventListener("slid.bs.carousel", () => {
-        // Reset animations for new active slide
-        document.querySelectorAll(".animate-fade").forEach((element) => {
-            element.classList.remove("fade-in-active");
-            setTimeout(() => {
-                element.classList.add("fade-in-active");
-            }, 300);
-        });
+    // Autoplay carousel on page load
+    new bootstrap.Carousel(carousel, {
+        interval: 4000, // Slide every 4 seconds
+        pause: "hover"
     });
 });
+
 
 
 // About section js
