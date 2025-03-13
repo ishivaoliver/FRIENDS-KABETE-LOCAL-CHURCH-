@@ -6,6 +6,67 @@
   font-family: "Poppins", "Open Sans", sans-serif;
 }
 
+.top-bar {
+  background-color: #146ac7;
+  padding: 8px 0;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  border-right: 2px solid white; /* Blinking cursor effect */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 14px; /* Smaller font size on mobile */
+  }
+}
+
+@media (max-width: 276px) {
+  .welcome-text {
+    font-size: 12px; /* Even smaller for very small screens */
+  }
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-link i {
+  margin-right: 5px;
+  color: #ffdd57;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-link {
+  color: white;
+  font-size: 18px;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffdd57;
+}
+
 /* General Navbar Styling */
 .navbar {
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */

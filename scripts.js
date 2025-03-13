@@ -13,6 +13,43 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
     });
 });
 
+// Top navbar  section 
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.getElementById("typing-text");
+    const text = "Welcome to Friends Church Quakers Kabete";
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, getTypingSpeed()); // Adjust speed dynamically
+        } else {
+            setTimeout(() => {
+                textElement.innerHTML = "";
+                index = 0;
+                typeText(); // Restart typing effect
+            }, 2000);
+        }
+    }
+
+    function getTypingSpeed() {
+        if (window.innerWidth <= 480) return 150; // Slower speed for small screens
+        if (window.innerWidth <= 768) return 120;
+        return 100; // Normal speed for larger screens
+    }
+
+    typeText();
+
+    // Recalculate typing speed on window resize
+    window.addEventListener("resize", function () {
+        index = 0;
+        textElement.innerHTML = "";
+        typeText();
+    });
+});
+
+
 
 // Dynamically resize fonts for better readability
 function adjustFontSize() {
