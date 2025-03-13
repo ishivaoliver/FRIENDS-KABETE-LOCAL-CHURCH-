@@ -284,6 +284,34 @@ document.getElementById('donation-form').addEventListener('submit', function (e)
     closeDonateModal();
 });
 
+// Blog section 
+document.addEventListener("DOMContentLoaded", function () {
+    // Smooth Scroll for Blog Links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
+
+    // Add Hover Effect to Blog Cards
+    const blogCards = document.querySelectorAll(".blog-card");
+    blogCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.style.boxShadow = "0 8px 12px rgba(0, 0, 0, 0.2)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+        });
+    });
+});
+
+
+
+// contact us section 
 
 document.addEventListener('DOMContentLoaded', function () {
     // Form validation
@@ -341,25 +369,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const backToTopButton = document.getElementById("backToTop");
-
-    // Show/Hide Button on Scroll
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add("visible");
-            backToTopButton.classList.remove("hidden");
-        } else {
-            backToTopButton.classList.add("hidden");
-            backToTopButton.classList.remove("visible");
-        }
-    });
-
-    // Scroll to Top on Click
-    backToTopButton.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-});
