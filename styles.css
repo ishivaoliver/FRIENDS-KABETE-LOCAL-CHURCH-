@@ -21,7 +21,6 @@
   overflow: hidden;
   display: inline-block;
   max-width: 100%;
-  border-right: 2px solid white; /* Blinking cursor effect */
 }
 
 /* Responsive Design for Smaller Screens */
