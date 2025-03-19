@@ -1266,270 +1266,59 @@
   }
 }
 
-/* Blog Section Styling */
-#blog {
-  background-color: #f9f9f9;
-  padding: 60px 0;
-}
-
-.section-header {
-  margin-bottom: 40px;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #2c3e50;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.section-description {
-  font-size: 1.125rem;
-  color: #7f8c8d;
-  line-height: 1.5;
-}
-
-/* Blog Categories Buttons */
-.blog-categories {
-  margin-bottom: 30px;
-}
-
-.category-btn {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 12px 30px;
-  border-radius: 30px;
-  margin: 0 10px;
-  transition: all 0.3s ease;
-  text-transform: capitalize;
-}
-
-.category-btn.active {
-  background-color: #3498db;
-  color: #fff;
-}
-
-.category-btn:hover {
-  background-color: #2980b9;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Blog Posts */
-.blog-post {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.blog-post:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
-}
-
-.blog-post .card-img-top {
-  max-height: 250px;
-  object-fit: cover;
-  transition: all 0.3s ease;
-}
-
-.blog-post:hover .card-img-top {
-  transform: scale(1.1);
-}
-
-.blog-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin: 15px 0;
-}
-
-.blog-excerpt {
-  font-size: 1rem;
-  color: #7f8c8d;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.blog-excerpt:hover {
-  color: #2980b9;
-}
-
-.blog-post .btn {
-  background-color: #3498db;
-  color: #fff;
-  border-radius: 30px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-
-.blog-post .btn:hover {
-  background-color: #2980b9;
-}
-
-.card-footer {
-  background-color: #f1f1f1;
-  padding: 15px;
-}
-
-.social-btn {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  transition: color 0.3s ease;
-}
-
-.social-btn:hover {
-  color: #2980b9;
-}
-
-.social-btn i {
-  margin-right: 8px;
-}
-
-/* Comment Section */
-.comment-section {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-}
-
-.comment-title {
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-.comment-form .form-label {
-  font-size: 1rem;
-  color: #2c3e50;
-  margin-bottom: 8px;
-}
-
-.comment-form .form-control {
-  font-size: 1rem;
-  border-radius: 8px;
-  padding: 12px;
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
-}
-
-.comment-form .form-control:focus {
-  border-color: #3498db;
-  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
-}
-
-.comment-form button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 30px;
-  border: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.comment-form button:hover {
-  background-color: #2980b9;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .blog-categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .category-btn {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  .blog-post {
-    margin-bottom: 20px;
-  }
-
-  .blog-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .card-img-top {
-    height: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  .blog-title {
-    font-size: 1.25rem;
-  }
-
-  .blog-excerpt {
-    font-size: 0.875rem;
-  }
-
-  .comment-section {
-    padding: 30px;
-  }
-
-  .comment-form button {
-    width: 100%;
-  }
-}
-
-/* Blog Section Styling */
+/* Blog Section */
 .blog-section {
-  background: #f8f9fa;
-  padding: 50px 0;
+  background: #0d1117;
+  padding: 60px 0;
+  color: #ffffff;
 }
 
 /* Featured Header */
 .featured-header {
-  background: linear-gradient(to right, #146ac7, #004a99);
-  padding: 40px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  padding: 50px;
+  border-radius: 15px;
+  text-align: center;
 }
 
-/* Blog Card */
+/* Blog Cards */
 .blog-card {
-  background: white;
-  border-radius: 10px;
+  background: #161b22;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 214, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 214, 255, 0.5);
 }
 
+/* Blog Images */
 .blog-img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
+.blog-card:hover .blog-img {
+  transform: scale(1.05);
+}
+
+/* Blog Content */
 .blog-content {
   padding: 20px;
 }
 
 .blog-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: #00c6ff;
 }
 
 .read-more {
-  color: #146ac7;
+  color: #00c6ff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -1540,51 +1329,33 @@
 
 /* Sidebar */
 .sidebar {
-  position: sticky;
-  top: 20px;
-}
-
-.about-church {
-  background: white;
+  background: #161b22;
   padding: 20px;
   border-radius: 10px;
+}
+
+.about-church,
+.recent-sermons {
   margin-bottom: 20px;
 }
 
-.recent-sermons ul {
-  list-style: none;
-  padding: 0;
-}
-
-.recent-sermons li a {
-  text-decoration: none;
-  color: #146ac7;
-}
-
-.recent-sermons li a:hover {
-  text-decoration: underline;
-}
-
-/* Social Media Links */
-.social-links {
-  margin-top: 20px;
-}
-
+/* Social Links */
 .social-links a {
-  font-size: 20px;
+  font-size: 22px;
+  color: #00c6ff;
   margin-right: 10px;
-  color: #146ac7;
+  transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color: #004a99;
+  color: #0072ff;
 }
 
-/* Blog Post Pagination */
-.blog-pagination {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-content h3 {
+    font-size: 1.4rem;
+  }
 }
 
 /* Contact Section Styling */
