@@ -179,6 +179,10 @@
   /* Maintains the F-pattern */
 }
 
+#carouselExampleFade {
+  padding: 0;
+}
+
 /* Carousel Image Fix */
 .carousel-inner,
 .carousel-item {
@@ -918,243 +922,121 @@
   margin-bottom: 20px;
 }
 
-/* Ministries & Volunteer Opportunities Section */
-#ministries {
-  background-color: #f9f9f9;
-  padding-top: 50px;
-  padding-bottom: 50px;
+/* Ministries Section */
+.ministries-section {
+  background: #0d1117;
+  padding: 60px 0;
+  color: #ffffff;
 }
 
-#ministries .section-title {
+/* Section Titles */
+.section-title {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
   margin-bottom: 20px;
+  color: #00c6ff;
 }
 
-#ministries .section-description {
-  font-size: 1.1rem;
-  color: #666;
+/* Section Description */
+.section-description {
+  font-size: 1.2rem;
   max-width: 800px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 40px auto;
+  color: #cccccc;
   line-height: 1.6;
 }
 
+/* Ministry Cards */
 .ministry-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 214, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .ministry-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 214, 255, 0.5);
 }
 
-.ministry-card .ministry-img {
+/* Ministry Images */
+.ministry-img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
 }
 
-.ministry-card .ministry-title {
+.ministry-card:hover .ministry-img {
+  transform: scale(1.05);
+}
+
+/* Ministry Titles */
+.ministry-title {
   font-size: 1.8rem;
-  color: #0056b3;
+  color: #00c6ff;
   margin-top: 15px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.ministry-card .ministry-description {
+/* Ministry Descriptions */
+.ministry-description {
   font-size: 1rem;
-  color: #555;
+  color: #cccccc;
   margin-top: 10px;
   line-height: 1.6;
 }
 
-.ministry-card .btn-outline-primary {
-  font-size: 1rem;
-  padding: 8px 15px;
-  border-radius: 25px;
-  border: 2px solid #0056b3;
-  color: #0056b3;
-  transition: all 0.3s ease-in-out;
-}
-
-.ministry-card .btn-outline-primary:hover {
-  background-color: #0056b3;
-  color: #fff;
-  border: 2px solid #0056b3;
-}
-
-.volunteer-form .form-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.volunteer-form .form-description {
+/* Futuristic Buttons */
+.btn-futuristic {
+  display: inline-block;
+  padding: 12px 25px;
   font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.volunteer-form .form-label {
-  font-size: 1rem;
-  color: #333;
-}
-
-.volunteer-form .form-control {
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 12px 15px;
-  border: 2px solid #ddd;
-  margin-bottom: 20px;
-}
-
-.volunteer-form .form-control:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
-}
-
-.volunteer-form select.form-control {
-  font-size: 1rem;
-}
-
-.volunteer-form button {
-  background-color: #28a745;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.volunteer-form button:hover {
-  background-color: #218838;
-}
-
-/* Upcoming Volunteer Events */
-#ministries .events-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-#ministries .events-description {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-#ministries .list-group-item {
-  font-size: 1.1rem;
-  padding: 12px 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #333;
-  transition: all 0.3s ease-in-out;
-}
-
-#ministries .list-group-item:hover {
-  background-color: #f8f9fa;
-  border-color: #0056b3;
-}
-
-#ministries .badge-primary {
-  background-color: #0056b3;
+  font-weight: bold;
+  text-transform: uppercase;
   border-radius: 50px;
-  padding: 5px 15px;
-  font-size: 0.9rem;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 214, 255, 0.6);
 }
 
-#ministries .badge-primary:hover {
-  background-color: #004085;
+.btn-futuristic:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 25px rgba(0, 214, 255, 0.9);
+  transform: scale(1.05);
 }
 
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-  #ministries .ministry-card {
-    margin-bottom: 30px;
-  }
-
-  #ministries .ministry-title {
-    font-size: 1.5rem;
-  }
-
-  #ministries .ministry-description {
-    font-size: 0.9rem;
-  }
-
-  #ministries .volunteer-form .form-title {
-    font-size: 1.5rem;
-  }
-
-  #ministries .volunteer-form .form-description {
-    font-size: 1rem;
-  }
-
-  #ministries .events-title {
-    font-size: 1.5rem;
-  }
-
-  #ministries .events-description {
-    font-size: 1rem;
-  }
-
-  #ministries .list-group-item {
-    font-size: 1rem;
-  }
-
-  #ministries .badge-primary {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 576px) {
-  #ministries .section-title {
+  .section-title {
     font-size: 2rem;
   }
 
-  #ministries .section-description {
+  .section-description {
     font-size: 1rem;
   }
 
-  #ministries .ministry-title {
-    font-size: 1.3rem;
+  .ministry-title {
+    font-size: 1.5rem;
   }
 
-  #ministries .ministry-description {
-    font-size: 0.8rem;
-  }
-
-  #ministries .volunteer-form .form-title {
-    font-size: 1.3rem;
-  }
-
-  #ministries .volunteer-form .form-description {
+  .ministry-description {
     font-size: 0.9rem;
   }
 
-  #ministries .events-title {
-    font-size: 1.3rem;
-  }
-
-  #ministries .events-description {
-    font-size: 0.9rem;
-  }
-
-  #ministries .list-group-item {
-    font-size: 0.9rem;
-  }
-
-  #ministries .badge-primary {
-    font-size: 0.7rem;
+  .btn-futuristic {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 
