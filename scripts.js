@@ -111,7 +111,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Hero Section 
+// Hero section - Ensure carousel works properly
 document.addEventListener("DOMContentLoaded", function () {
     var carousel = document.getElementById("carouselExampleFade");
 
