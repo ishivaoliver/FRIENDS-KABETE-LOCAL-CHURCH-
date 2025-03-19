@@ -111,7 +111,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Hero section 
+// Hero Section 
 document.addEventListener("DOMContentLoaded", function () {
     var carousel = document.getElementById("carouselExampleFade");
 
