@@ -234,7 +234,6 @@
 .hero-buttons {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
 }
 
 .hero-buttons .btn {
