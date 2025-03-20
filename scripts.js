@@ -286,6 +286,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // Events section 
+document.addEventListener('DOMContentLoaded', function () {
+    // Event Countdown Timer
+    const eventDates = [
+        { id: "event1", date: "2024-12-02T10:00:00" },
+        { id: "event2", date: "2024-12-15T08:30:00" },
+        { id: "event3", date: "2025-01-12T09:00:00" }
+    ];
+
+    eventDates.forEach(event => {
+        let countdownElement = document.createElement("p");
+        countdownElement.classList.add("events-countdown");
+        countdownElement.innerHTML = "Counting down...";
+
+        let eventCard = document.querySelector(`.events-card-title:contains('${event.id}')`);
+        if (eventCard) eventCard.parentNode.appendChild(countdownElement);
+
+        function updateCountdown() {
+            const now = new Date();
+            const eventDate = new Date(event.date);
+            const timeLeft = eventDate - now;
+
+            if (timeLeft > 0) {
+                let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+                let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+
+                countdownElement.innerHTML = `Starts in: ${days}d ${hours}h ${minutes}m`;
+            } else {
+                countdownElement.innerHTML = "Event is Live!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    });
+
+    // AOS Animation
+    AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+    });
+});
+
 
 
 

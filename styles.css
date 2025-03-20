@@ -839,6 +839,120 @@
   }
 }
 
+/* Events Section */
+.events-section {
+  padding: 60px 0;
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
+
+/* Section Title */
+.events-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Section Description */
+.events-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #6c757d;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Event Cards */
+.events-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.events-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Image */
+.events-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+/* Event Card Body */
+.events-card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Event Title */
+.events-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Event Date */
+.events-date {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+/* Event Description */
+.events-card-text {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Event Buttons */
+.events-btn {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #007bff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.events-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-title {
+    font-size: 2rem;
+  }
+
+  .events-description {
+    font-size: 1rem;
+  }
+
+  .events-card {
+    margin-bottom: 20px;
+  }
+
+  .events-img {
+    height: 180px;
+  }
+
+  .events-btn {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
 /* Ministries Section */
 .ministries-section {
   background: #0d1117;
