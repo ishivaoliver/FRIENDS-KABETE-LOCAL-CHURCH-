@@ -408,23 +408,18 @@ document.addEventListener('DOMContentLoaded', function () {
             form.reset();
         }
         form.classList.add('was-validated');
-    }, false);
+    });
 
     // Adjust Map Size Based on Screen Width
     function adjustMapHeight() {
         const mapIframe = document.querySelector('#contactMap');
-        const viewportWidth = window.innerWidth;
-
-        if (viewportWidth < 576) {
-            mapIframe.style.height = '250px';
-        } else {
-            mapIframe.style.height = '350px';
-        }
+        mapIframe.style.height = window.innerWidth < 576 ? '250px' : '350px';
     }
 
     window.addEventListener('resize', adjustMapHeight);
     adjustMapHeight();
 });
+
 
 
 // Chat widget 
