@@ -398,58 +398,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Form validation
-    const form = document.querySelector('#contact form');
+    const form = document.querySelector('#contactForm');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            // Handle form submission
             alert('Message sent successfully!');
+            form.reset();
         }
         form.classList.add('was-validated');
     }, false);
 
-    // Adjust iframe height dynamically based on screen size
+    // Adjust Map Size Based on Screen Width
     function adjustMapHeight() {
-        const mapIframe = document.querySelector('.contact-section iframe');
+        const mapIframe = document.querySelector('#contactMap');
         const viewportWidth = window.innerWidth;
 
         if (viewportWidth < 576) {
-            mapIframe.style.height = '200px';
-        } else {
             mapIframe.style.height = '250px';
+        } else {
+            mapIframe.style.height = '350px';
         }
     }
 
-    // Smooth scroll for 'Get Directions' button
-    document.querySelector('.btn-outline-primary').addEventListener('click', (e) => {
-        e.preventDefault();
-        window.open(e.target.href, '_blank');
-    });
-
-    // Call the map height adjustment function on load and resize
     window.addEventListener('resize', adjustMapHeight);
     adjustMapHeight();
-
-
-
-
-
-
-    // Smooth scroll for anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (event) {
-            event.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            window.scroll({
-                top: target.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
 });
+
 
 // Chat widget 
 
