@@ -1,20 +1,20 @@
 # Friends Church Quakers Kabete Website
 
-Welcome to the **Friends Church Quakers Kabete Website Repository**! This project serves as an inclusive digital platform for worship, community engagement, and spiritual growth. It’s designed to inspire, inform, and connect members and visitors alike.
+Welcome to the **Friends Church Quakers Kabete**! This project serves as an inclusive digital platform for worship, community engagement, and spiritual growth. It’s designed to inspire, inform, and connect members and visitors alike.
 
 ---
 
 ## Table of Contents
 
-1. [About the Project](#about-the-project)  
-2. [Features](#features)  
-3. [Technology Stack](#technology-stack)  
-4. [Setup Instructions](#setup-instructions)  
-5. [Usage](#usage)  
-6. [Roadmap](#roadmap)  
-7. [Contributing](#contributing)  
-8. [License](#license)  
-9. [Contact Information](#contact-information)  
+1. [About the Project](#about-the-project)
+2. [Features](#features)
+3. [Technology Stack](#technology-stack)
+4. [Setup Instructions](#setup-instructions)
+5. [Usage](#usage)
+6. [Roadmap](#roadmap)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact Information](#contact-information)
 
 ---
 
@@ -65,6 +65,7 @@ It includes essential tools and resources for members, visitors, and seekers, en
 The website leverages the following technologies to ensure high performance, scalability, and user satisfaction:
 
 1. **Frontend:**
+
    - HTML5 and CSS3 for structure and styling
    - Bootstrap 5 for responsiveness and layout
    - JavaScript for interactivity
@@ -72,9 +73,11 @@ The website leverages the following technologies to ensure high performance, sca
    - AOS (Animate On Scroll) for subtle animations
 
 2. **APIs:**
+
    - Google Maps API for location integration
 
 3. **Performance:**
+
    - Lazy loading for images and assets
    - Minified CSS and JavaScript for faster page speeds
 
@@ -89,17 +92,17 @@ The website leverages the following technologies to ensure high performance, sca
 To view and test the website locally, follow these steps:
 
 ### Prerequisites
+
 - A modern web browser (e.g., Chrome, Firefox, Safari)
 - A text editor (e.g., VS Code) for customization
 - Optional: Live Server for real-time updates
 
 ### Steps
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/friends-church-kabete.git
-
-
-
+   ```
 
 Usage
 Check out the live version of the website on link provided above.
@@ -127,12 +130,8 @@ Online Giving Portal:
 
 Provide a secure and efficient platform for donations, tithes, and offerings, making it easier for members to support the church's mission.
 
-
-
-
-
-
 ### Improvements Over the Example:
+
 1. **Detailed Features:** Expanded list of features to engage readers and explain value propositions.
 2. **Roadmap Section:** Outlined both current functionality and planned enhancements.
 3. **SEO-Optimized Writing:** Keywords and descriptions throughout for clarity and engagement.
