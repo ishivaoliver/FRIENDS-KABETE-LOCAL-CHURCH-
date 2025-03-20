@@ -1158,23 +1158,12 @@
   }
 }
 
-/* General Styling for dnation section */
+/* Donation Section */
 #donate {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  color: #ffffff;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
   padding: 60px 0;
   text-align: center;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.section-description {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
 }
 
 /* Progress Bar */
@@ -1192,7 +1181,7 @@
 
 .progress-bar {
   background: #28a745;
-  color: #ffffff;
+  color: white;
   font-weight: bold;
   line-height: 25px;
   text-align: center;
@@ -1202,7 +1191,7 @@
 /* Donation Cards */
 .donation-card {
   background: #ffffff;
-  color: #333333;
+  color: #333;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1236,34 +1225,16 @@
 
 .modal-content {
   background: #ffffff;
-  color: #333333;
+  color: #333;
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
   width: 90%;
 }
 
-.close-btn {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #333333;
-}
-
-/* Form Adjustments */
-@media (max-width: 576px) {
-  form input,
-  form select,
-  form textarea {
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
-  form button {
-    width: 100%;
-  }
+/* Hide other payment options */
+.payment-section {
+  display: none;
 }
 
 /* Blog Section */

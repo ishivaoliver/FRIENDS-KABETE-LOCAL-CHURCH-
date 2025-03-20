@@ -754,68 +754,78 @@
 <!-- Donate Section -->
 <section id="donate" class="py-5">
   <div class="container text-center">
-      <h2 class="section-title">Support Our Mission</h2>
-      <p class="section-description">
-          Your generous contributions help us spread the love and message of Jesus Christ, support community outreach, and provide vital services to those in need.
-      </p>
-      
-      <!-- Progress Bar -->
-      <div class="progress-container my-4">
-          <h5>Fundraising Goal: Ksh 500,000</h5>
-          <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                  Ksh105,500 Raised
-              </div>
-          </div>
+    <h2 class="section-title">Support Our Mission</h2>
+    <p class="section-description">
+      Your generous contributions help us spread the love of Christ, support community outreach, and provide vital services to those in need.
+    </p>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container my-4">
+      <h5>Fundraising Goal: Ksh 500,000</h5>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+          Ksh105,500 Raised
+        </div>
       </div>
+    </div>
 
-      <!-- Donation Options -->
-      <div class="row mt-5">
-          <div class="col-md-4">
-              <div class="donation-card">
-                  <h4 class="donation-title">One-Time Donation</h4>
-                  <p>Make a one-time contribution to support our mission.</p>
-                  <button class="btn btn-primary donate-btn" onclick="openDonateModal('one-time')">Donate Now</button>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="donation-card">
-                  <h4 class="donation-title">Monthly Support</h4>
-                  <p>Become a monthly partner and help us make a lasting impact.</p>
-                  <button class="btn btn-success donate-btn" onclick="openDonateModal('monthly')">Subscribe</button>
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="donation-card">
-                  <h4 class="donation-title">Other Contributions</h4>
-                  <p>Want to contribute in another way? Contact us for details.</p>
-                  <a href="#contact" class="btn btn-secondary donate-btn">Contact Us</a>
-              </div>
-          </div>
+    <!-- Donation Options -->
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="donation-card">
+          <h4 class="donation-title">M-Pesa STK Push</h4>
+          <p>Donate instantly via M-Pesa. Enter your number and receive a payment request.</p>
+          <button class="btn btn-primary donate-btn" onclick="openDonateModal('mpesa')">Donate via M-Pesa</button>
+        </div>
       </div>
+      <div class="col-md-4">
+        <div class="donation-card">
+          <h4 class="donation-title">PayPal</h4>
+          <p>Securely donate using PayPal. Support us from anywhere in the world.</p>
+          <button class="btn btn-success donate-btn" onclick="openDonateModal('paypal')">Donate via PayPal</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="donation-card">
+          <h4 class="donation-title">Bank Transfer</h4>
+          <p>Make a direct deposit to our church’s bank account.</p>
+          <button class="btn btn-secondary donate-btn" onclick="openDonateModal('bank')">Bank Transfer</button>
+        </div>
+      </div>
+    </div>
 
-      <!-- Payment Modal -->
-      <div id="donate-modal" class="modal">
-          <div class="modal-content">
-              <span class="close-btn" onclick="closeDonateModal()">&times;</span>
-              <h3 class="modal-title">Complete Your Donation</h3>
-              <form id="donation-form">
-                  <label for="donation-amount">Donation Amount ($):</label>
-                  <input type="number" id="donation-amount" class="form-control" placeholder="Enter amount" required>
-                  
-                  <label for="payment-method">Payment Method:</label>
-                  <select id="payment-method" class="form-control" required>
-                      <option value="credit-card">Credit Card</option>
-                      <option value="paypal">PayPal</option>
-                      <option value="bank-transfer">Bank Transfer</option>
-                  </select>
-                  
-                  <button type="submit" class="btn btn-primary mt-3">Donate Now</button>
-              </form>
+    <!-- Payment Modal -->
+    <div id="donate-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeDonateModal()">&times;</span>
+        <h3 class="modal-title">Complete Your Donation</h3>
+        <form id="donation-form">
+          <div id="mpesa-section" class="payment-section">
+            <label for="mpesa-number">M-Pesa Number:</label>
+            <input type="tel" id="mpesa-number" class="form-control" placeholder="Enter your Safaricom number" required>
+            <button type="submit" class="btn btn-primary mt-3">Proceed with M-Pesa</button>
           </div>
+
+          <div id="paypal-section" class="payment-section">
+            <p>Click the button below to proceed with PayPal.</p>
+            <button type="button" class="btn btn-success mt-3" onclick="processPayPal()">Donate via PayPal</button>
+          </div>
+
+          <div id="bank-section" class="payment-section">
+            <p>Bank Account Details:</p>
+            <ul>
+              <li><strong>Bank:</strong> ABC Bank</li>
+              <li><strong>Account Name:</strong> Friends Church</li>
+              <li><strong>Account Number:</strong> 1234567890</li>
+            </ul>
+            <button type="button" class="btn btn-secondary mt-3" onclick="copyBankDetails()">Copy Bank Details</button>
+          </div>
+        </form>
       </div>
+    </div>
   </div>
 </section>
+
 
 
 <!-- Blog Section -->
@@ -838,7 +848,7 @@
     <div class="row g-4">
       <div class="col-md-6" data-aos="fade-up">
         <div class="blog-card">
-          <img src="assets/sunday-sermon.jpg" class="blog-img" alt="Sunday Sermon">
+          <img src="assets/Church leadership profiles/Pst Sasaka.jpg" class="blog-img" alt="Sunday Sermon">
           <div class="blog-content">
             <span class="category text-primary">Faith & Worship</span>
             <h3>Sunday Sermon Highlights</h3>
@@ -850,7 +860,7 @@
 
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="blog-card">
-          <img src="assets/community-outreach.jpg" class="blog-img" alt="Community Outreach">
+          <img src="assets/Community outreach.jpg" class="blog-img" alt="Community Outreach">
           <div class="blog-content">
             <span class="category text-success">Community</span>
             <h3>Serving with Love</h3>

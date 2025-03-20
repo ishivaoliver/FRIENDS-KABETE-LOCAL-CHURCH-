@@ -262,27 +262,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Open and Close Modal
+// Donation section 
 function openDonateModal(type) {
     const modal = document.getElementById('donate-modal');
     modal.style.display = 'flex';
-    const title = document.querySelector('.modal-title');
-    title.textContent = type === 'one-time' ? 'One-Time Donation' : 'Monthly Support';
+
+    document.querySelectorAll('.payment-section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    if (type === 'mpesa') {
+        document.getElementById('mpesa-section').style.display = 'block';
+    } else if (type === 'paypal') {
+        document.getElementById('paypal-section').style.display = 'block';
+    } else if (type === 'bank') {
+        document.getElementById('bank-section').style.display = 'block';
+    }
 }
 
 function closeDonateModal() {
-    const modal = document.getElementById('donate-modal');
-    modal.style.display = 'none';
+    document.getElementById('donate-modal').style.display = 'none';
 }
 
-// Handle Donation Form Submission
+// M-Pesa STK Push (Simulated)
 document.getElementById('donation-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    const amount = document.getElementById('donation-amount').value;
-    const method = document.getElementById('payment-method').value;
-    alert(`Thank you for your donation of $${amount} via ${method}!`);
+    const mpesaNumber = document.getElementById('mpesa-number').value;
+    alert(`STK Push sent to ${mpesaNumber}. Confirm on your phone.`);
     closeDonateModal();
 });
+
+// Simulated PayPal Redirection
+function processPayPal() {
+    alert('Redirecting to PayPal...');
+    window.location.href = "https://www.paypal.com/donate";
+}
+
+// Copy Bank Details
+function copyBankDetails() {
+    navigator.clipboard.writeText("Bank: ABC Bank\nAccount Name: Friends Church\nAccount Number: 1234567890");
+    alert("Bank details copied to clipboard.");
+}
+
 
 
 // Blog section 
