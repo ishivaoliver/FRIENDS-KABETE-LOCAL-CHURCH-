@@ -363,16 +363,30 @@
 </section>
 
   
-
- <!-- Sermons Section -->
-<section id="sermons" class="py-5 bg-light">
+<!-- Sermons Section -->
+<section id="sermons-section" class="sermons-section py-5 bg-light">
   <div class="container">
       <!-- Section Header -->
       <div class="text-center mb-5">
-          <h2 class="text-primary">Latest Sermons</h2>
-          <p class="text-muted">
+          <h2 class="sermons-title text-primary">Latest Sermons</h2>
+          <p class="sermons-description text-muted">
               Dive into inspiring sermons that nurture your faith and provide guidance for your spiritual journey. Watch, listen, or download sermons at your convenience.
           </p>
+      </div>
+
+      <!-- Embedded YouTube Video for Latest Sermon -->
+      <div class="text-center mb-5 sermons-video-container">
+        <h3 class="sermons-subtitle text-dark">Latest Sermon</h3>
+        <div class="sermons-video-wrapper">
+          <iframe 
+            id="latestSermonVideo"
+            class="sermons-video-iframe"
+            src="https://www.youtube.com/embed/dmNsoMLB3E8"
+            title="Latest Sermon"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
 
       <!-- Filter and Search -->
@@ -393,43 +407,35 @@
 
       <!-- Sermons Grid -->
       <div class="row" id="sermonsGrid">
-          <!-- Sermon Card -->
+          <!-- Sermon Cards -->
           <div class="col-md-4 mb-4" data-category="thanksgiving">
-              <div class="card border-0 shadow">
-                  <img class="card-img-top" src="assets/Service Posters/WhatsApp Image 2025-01-04 at 16.31.25_b83e70c5.jpg" alt="Walking in Faith">
+              <div class="card sermons-card border-0 shadow">
+                  <img class="card-img-top" src="" alt="Walking in Faith">
                   <div class="card-body">
-                      <h5 class="card-title">First Sunday Service of The Year 2025</h5>
-                      <p class="card-text">
-                        Discovering Your Destiny.
-                      </p>
+                      <h5 class="sermons-card-title">First Sunday Service of The Year 2025</h5>
+                      <p class="sermons-card-text">Discovering Your Destiny.</p>
                       <a href="https://www.youtube.com/live/pdTHDHOT26g?si=MIhFI5QQRw_K6i1t" class="btn btn-outline-primary" target="_blank">Watch Now</a>
                   </div>
               </div>
           </div>
 
-          <!-- Sermon Card -->
           <div class="col-md-4 mb-4" data-category="love">
-              <div class="card border-0 shadow">
-                  <img class="card-img-top" src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/458082509_832087125780282_805856949862946590_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGD_PNepy7DqIgWzdiQnE8M5Xjh3DK5ehXleOHcMrl6FVvcBBvG0sUL9YwHJKJ9qd12_jdrjU1lKZrqqOVnRWFC&_nc_ohc=r_r4XD4XedwQ7kNvgEMRStq&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=AZlAS2LrHmbTztfJjs4ccP6&oh=00_AYD7cmlbYvBDrFVoDruU8fDsab9ad5gsTz7xYPUVtrWsVQ&oe=6754BC7A" alt="The Power of Love">
+              <div class="card sermons-card border-0 shadow">
+                  <img class="card-img-top" src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/458082509_832087125780282_805856949862946590_n.jpg" alt="The Power of Love">
                   <div class="card-body">
-                      <h5 class="card-title">The Power of Love</h5>
-                      <p class="card-text">
-                          Discover how love transforms relationships and communities.
-                      </p>
+                      <h5 class="sermons-card-title">The Power of Love</h5>
+                      <p class="sermons-card-text">Discover how love transforms relationships and communities.</p>
                       <a href="https://www.youtube.com/embed/dummyvideo2" class="btn btn-outline-primary" target="_blank">Watch Now</a>
                   </div>
               </div>
           </div>
 
-          <!-- Sermon Card -->
           <div class="col-md-4 mb-4" data-category="hope">
-              <div class="card border-0 shadow">
-                  <img class="card-img-top" src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/457794072_832083892447272_1910548813891836713_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHr2FkCBfXhaZDo06ZWjiheju2eb7b9hx-O7Z5vtv2HH9nFzVxsGMpLvnh4xDkcjz9B_X6_FTS0dAtiQ8fFnsWA&_nc_ohc=AouLStnzAVgQ7kNvgGVz9eu&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=AHM8I5065ZzPXzM7oVoeSwl&oh=00_AYCrUE0B6Wc2wLkFFiZAXUD0pP7KTvAhA7LsyyKos7j84w&oe=6754E0D0" alt="Hope in the Storm">
+              <div class="card sermons-card border-0 shadow">
+                  <img class="card-img-top" src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/457794072_832083892447272_1910548813891836713_n.jpg" alt="Hope in the Storm">
                   <div class="card-body">
-                      <h5 class="card-title">Virtual Service 11th November 2024</h5>
-                      <p class="card-text">
-                          A sermon about finding hope and strength during life.
-                      </p>
+                      <h5 class="sermons-card-title">Virtual Service 11th November 2024</h5>
+                      <p class="sermons-card-text">Finding hope and strength during life.</p>
                       <a href="https://www.youtube.com/live/R54_ExD6QMY?si=IUfCnXD1vY-n5pzo" class="btn btn-outline-primary" target="_blank">Watch Now</a>
                   </div>
               </div>
@@ -438,8 +444,10 @@
   </div>
 </section>
 
+
+
 <!-- Visit YouTube Channel CTA -->
-<div class="text-center mt-5">
+<div class="text-center mt-3 mb-5">
   <h4 class="text-primary">Want More Sermons?</h4>
   <p class="text-muted">
       Explore a wealth of inspiring sermons and live services on our YouTube channel. Don't forget to subscribe for updates!
@@ -451,7 +459,7 @@
 
 
       <!-- Podcasts Section -->
-      <div class="text-center mt-5">
+      <!-- <div class="text-center mt-5">
         <h4 class="text-secondary">Listen On the Go</h4>
         <p>
           Prefer listening? Tune in to our sermon podcasts on your favorite platforms.
@@ -462,16 +470,16 @@
         <a href="#" class="btn btn-primary">
           <i class="fas fa-headphones"></i> Listen on Apple Podcasts
         </a>
-      </div>
+      </div> -->
   
       <!-- Call to Action -->
-      <div class="text-center mt-5">
+      <!-- <div class="text-center mt-5">
         <h5 class="text-secondary">Stay Spiritually Connected</h5>
         <p>
           Subscribe to our channel or podcast to never miss an inspiring message. Join us in sharing God’s Word with the world.
         </p>
         <a href="#contact" class="btn btn-primary">Subscribe Now</a>
-      </div>
+      </div> -->
     </div>
   </section>
 <!-- Testimonies and Stories -->

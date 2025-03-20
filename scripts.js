@@ -166,13 +166,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Sermons 
+// Sermons  section
 
 document.addEventListener('DOMContentLoaded', function () {
     // Sermon filter and search functionality
     const sermonFilter = document.getElementById('sermonFilter');
     const sermonSearch = document.getElementById('sermonSearch');
     const sermonCards = document.querySelectorAll('#sermonsGrid .col-md-4');
+
+    // YouTube Video Embed URL
+    const latestSermonVideo = document.getElementById('latestSermonVideo');
+    const latestSermonURL = "https://www.youtube.com/embed/dmNsoMLB3E8"; // Change this for new sermon updates
+
+    // Set YouTube Video Source Dynamically
+    if (latestSermonVideo) {
+        latestSermonVideo.src = latestSermonURL;
+    }
 
     // Filter Sermons by Category
     sermonFilter.addEventListener('change', filterSermons);
@@ -194,8 +203,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function searchSermons() {
         const query = sermonSearch.value.toLowerCase();
         sermonCards.forEach(card => {
-            const title = card.querySelector('.card-title').textContent.toLowerCase();
-            const description = card.querySelector('.card-text').textContent.toLowerCase();
+            const title = card.querySelector('.sermons-card-title').textContent.toLowerCase();
+            const description = card.querySelector('.sermons-card-text').textContent.toLowerCase();
             if (title.includes(query) || description.includes(query)) {
                 card.style.display = 'block';
             } else {
@@ -207,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize: Show all sermons by default
     filterSermons();
 });
+
 
 // Wait until the DOM is fully loaded before running the script
 document.addEventListener('DOMContentLoaded', function () {

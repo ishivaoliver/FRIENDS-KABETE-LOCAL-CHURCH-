@@ -734,69 +734,79 @@
 }
 
 /* Sermons Section */
-#sermons {
+.sermons-section {
   padding: 60px 0;
   background-color: #f8f9fa;
 }
 
-#sermons h2 {
+/* Section Title */
+.sermons-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #007bff;
 }
 
-#sermons p {
+/* Section Description */
+.sermons-description {
   font-size: 1.1rem;
   color: #6c757d;
   line-height: 1.6;
 }
 
-/* Filter and Search */
-#sermons .form-select,
-#sermons .form-control {
-  border-radius: 30px;
-  padding: 10px;
-  font-size: 1rem;
+/* YouTube Video Container */
+.sermons-video-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sermons-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sermons-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 /* Sermon Cards */
-#sermons .card {
+.sermons-card {
   border: none;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#sermons .card:hover {
+.sermons-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-#sermons iframe {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-#sermons .card-body {
-  padding: 20px;
-  background-color: #fff;
-}
-
-#sermons .card-title {
+/* Card Title */
+.sermons-card-title {
   font-size: 1.25rem;
   font-weight: 600;
   color: #343a40;
 }
 
-#sermons .card-text {
+/* Card Text */
+.sermons-card-text {
   font-size: 1rem;
   color: #6c757d;
   line-height: 1.6;
 }
 
-#sermons .btn-outline-primary {
+/* Watch Now Button */
+.sermons-btn {
   border-radius: 25px;
   padding: 8px 20px;
   font-size: 1rem;
@@ -805,317 +815,28 @@
   transition: all 0.3s ease;
 }
 
-#sermons .btn-outline-primary:hover {
+.sermons-btn:hover {
   background-color: #007bff;
   color: white;
 }
 
-/* Podcasts Section */
-#sermons .btn-primary {
-  border-radius: 25px;
-  padding: 10px 30px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-#sermons .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  #sermons .card {
-    margin-bottom: 20px;
+  .sermons-video-wrapper {
+    padding-bottom: 75%;
   }
 
-  #sermons iframe {
-    height: 180px;
-  }
-
-  #sermons .col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* Additional Hover Effects for Sermon Cards */
-#sermons .card:hover .card-img-top {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-#sermons .card-img-top {
-  border-radius: 15px;
-  transition: transform 0.3s ease;
-}
-
-#sermons .card-body .btn {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Subtle Shadow Effect for Sermon Cards */
-#sermons .card {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Section header */
-#sermons .text-center h4,
-#sermons .text-center p {
-  margin-bottom: 30px;
-}
-
-/* Call to Action Section */
-#sermons .text-center.mt-5 h5 {
-  font-size: 1.5rem;
-  color: #6c757d;
-}
-
-#sermons .text-center.mt-5 p {
-  font-size: 1.1rem;
-  color: #6c757d;
-}
-
-#sermons .btn-primary {
-  font-size: 1rem;
-  padding: 12px 25px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 30px;
-  color: white;
-}
-
-#sermons .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-#sermons img.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  border-radius: 15px 15px 0 0; /* Match the card's border-radius */
-}
-
-#sermons img.card-img-top:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
-}
-
-/* YouTube CTA Section */
-#sermons .text-center.mt-5 h4 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #007bff; /* Matches the theme color */
-}
-
-#sermons .text-center.mt-5 p {
-  font-size: 1rem;
-  color: #6c757d;
-  margin-bottom: 20px;
-}
-
-#sermons .btn-primary {
-  font-size: 1.2rem;
-  padding: 12px 30px;
-  background-color: #007bff;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-}
-
-#sermons .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-#sermons .btn-primary {
-  position: relative;
-  overflow: hidden;
-}
-
-#sermons .btn-primary::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: width 0.3s ease;
-  z-index: 1;
-}
-
-#sermons .btn-primary:hover::after {
-  width: 100%;
-}
-
-/* Services Section */
-#services {
-  padding: 60px 0;
-}
-
-/* General Styles for the Testimonies Section */
-#testimonies {
-  background-image: url("assets/Local\ opening.jpg") no-repeat center center;
-  background-size: cover;
-  padding: 40px 0;
-  color: #fff;
-  text-align: center;
-}
-
-/* Section Title */
-#testimonies h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-#testimonies .text-center {
-  margin: 0 auto;
-}
-
-/* Video and Written Stories */
-#testimonies .row {
-  margin-top: 20px;
-}
-
-/* Video Section */
-#testimonies video {
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Written Testimonies Card Style */
-.card {
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  overflow: hidden;
-}
-
-.card-img-top {
-  border-bottom: 2px solid #eee;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.card-text {
-  color: #555;
-}
-
-/* Form Section */
-#testimony-form {
-  background: url("path/to/form-background-image.jpg") no-repeat center center;
-  background-size: cover;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  color: #333;
-}
-
-#testimony-form .form-label {
-  font-weight: bold;
-  color: #333;
-}
-
-#testimony-form input,
-#testimony-form textarea {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-  padding: 10px;
-  font-size: 1rem;
-  width: 100%;
-}
-
-#testimony-form textarea {
-  resize: none;
-}
-
-/* Submit Button */
-#testimony-form button {
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#testimony-form button:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-  #testimonies h2 {
+  .sermons-title {
     font-size: 2rem;
   }
 
-  .card-title {
-    font-size: 1.125rem;
+  .sermons-description {
+    font-size: 1rem;
   }
 
-  .card-text {
-    font-size: 0.9rem;
+  .sermons-card {
+    margin-bottom: 20px;
   }
-
-  #testimony-form {
-    margin-top: 30px;
-  }
-
-  #testimony-form input,
-  #testimony-form textarea {
-    font-size: 0.9rem;
-  }
-
-  #testimony-form button {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 576px) {
-  #testimonies h2 {
-    font-size: 1.75rem;
-  }
-
-  #testimony-form {
-    padding: 15px;
-    margin-top: 20px;
-  }
-
-  #testimony-form input,
-  #testimony-form textarea {
-    font-size: 0.85rem;
-  }
-
-  #testimony-form button {
-    width: 100%;
-  }
-}
-
-.card {
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card-body i {
-  font-size: 3rem;
-  color: #007bff;
-  margin-bottom: 20px;
 }
 
 /* Ministries Section */
