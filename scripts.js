@@ -147,6 +147,24 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
 });
 
+// Why join us section
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000, // Animation duration
+        once: true, // Ensures animations run only once
+    });
+    // Hover Effect on Cards
+    const whyCards = document.querySelectorAll(".why-card");
+    whyCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+            card.style.boxShadow = "0 12px 24px rgba(0, 214, 255, 0.4)";
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.boxShadow = "0 5px 15px rgba(0, 214, 255, 0.3)";
+        });
+    });
+});
 
 // Sermons 
 

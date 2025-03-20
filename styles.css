@@ -492,49 +492,132 @@
   }
 }
 
-/* Why join us section  */
-#why-join-us {
-  background-color: #f9f9f9;
+/* Why Join Us Section */
+.why-join-us-section {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
   padding: 60px 0;
 }
 
-.why-join-us-section .section-title {
-  font-size: 36px;
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  text-transform: uppercase;
+  color: #00c6ff;
 }
 
-.why-join-us-section .section-description {
-  font-size: 18px;
-  color: #666;
+/* Section Description */
+.section-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #ddd;
+  line-height: 1.6;
 }
 
+/* Card Styling */
 .why-card {
-  background-color: #fff;
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15); /* More transparent */
+  border-radius: 15px;
   padding: 20px;
-  transition: transform 0.3s ease;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 214, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(15px); /* Increases contrast */
 }
 
 .why-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 214, 255, 0.5);
+}
+
+/* Icon Styling */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  transition: transform 0.4s ease;
+}
+
+.why-card:hover .icon-container {
+  transform: rotate(15deg) scale(1.1);
 }
 
 .icon {
   font-size: 40px;
-  color: #007bff;
+  color: #00c6ff;
 }
 
+/* Card Title */
 .card-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #333;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff !important; /* Ensures full brightness */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Enhances visibility */
+  margin-bottom: 10px;
 }
 
 .card-text {
-  font-size: 16px;
-  color: #666;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff !important; /* Fully white */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+}
+
+/* Futuristic Button */
+.btn-futuristic {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 214, 255, 0.6);
+}
+
+.btn-futuristic:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 25px rgba(0, 214, 255, 0.9);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .btn-futuristic {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
 
 /* Sermons Section */
