@@ -620,6 +620,119 @@
   }
 }
 
+/* Services Section */
+.services-section {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 60px 0;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00c6ff;
+}
+
+/* Section Description */
+.section-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 214, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 214, 255, 0.5);
+}
+
+/* Service Icons */
+.service-icon {
+  font-size: 50px;
+  color: #00c6ff;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.2);
+}
+
+/* Service Title */
+.service-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Service Text */
+.service-text {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Futuristic Button */
+.btn-futuristic {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 214, 255, 0.6);
+}
+
+.btn-futuristic:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 25px rgba(0, 214, 255, 0.9);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .service-title {
+    font-size: 1.4rem;
+  }
+
+  .service-text {
+    font-size: 0.9rem;
+  }
+
+  .btn-futuristic {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
 /* Sermons Section */
 #sermons {
   padding: 60px 0;
