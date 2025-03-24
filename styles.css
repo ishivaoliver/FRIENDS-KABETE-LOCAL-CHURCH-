@@ -229,12 +229,31 @@ html {
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Paragraph - Readable on All Screens */
+/* Paragraph Animation - Slide Up */
 .hero-content p {
   font-size: clamp(1rem, 2vw, 1.4rem);
   font-weight: 600;
   line-height: 1.6;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Start position */
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.8s; /* Delay to make it appear after heading */
+}
+
+/* Keyframes for Slide-Up Effect */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 }
 
 /* Button Styles - Modern & Futuristic */
