@@ -118,9 +118,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener("DOMContentLoaded", function () {
     const announcementText = document.getElementById("announcement-text");
 
-    // Duplicate content to make seamless scrolling
+    // Duplicate content multiple times for infinite scrolling
     let originalText = announcementText.innerHTML;
-    announcementText.innerHTML = originalText + " | " + originalText;
+    announcementText.innerHTML = originalText + " | " + originalText + " | " + originalText + " | " + originalText;
 });
 
 
