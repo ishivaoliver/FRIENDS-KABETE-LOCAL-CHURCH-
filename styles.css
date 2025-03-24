@@ -169,6 +169,59 @@ html {
     margin-left: auto;
   }
 }
+
+/* 🌟 Futuristic Announcement Bar */
+.announcement-container {
+  width: 100%;
+  background: #146ac7; /* Transparent Glassmorphism */
+  backdrop-filter: blur(10px); /* Frosted Glass Effect */
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 99;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3); /* Neon Glow Effect */
+}
+
+/* 🔵 Scrolling Text */
+.announcement-content {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.2rem; /* Larger Text for Better Readability */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8); /* Futuristic Glow */
+  animation: scrollText 25s linear infinite;
+  padding-right: 50px;
+}
+
+/* ✨ Smooth Scroll Effect */
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* 🛑 Pause Scroll on Hover */
+.announcement-container:hover .announcement-content {
+  animation-play-state: paused;
+}
+
+/* 🎨 Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .announcement-content {
+    font-size: 1rem; /* Adjust text size for mobile */
+    animation: scrollText 30s linear infinite; /* Slower for better readability */
+  }
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;

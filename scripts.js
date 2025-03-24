@@ -13,6 +13,8 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
     });
 });
 
+
+
 // Top navbar  section 
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
@@ -110,6 +112,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+// Annoncement bar 
+document.addEventListener("DOMContentLoaded", function () {
+    const announcementText = document.getElementById("announcement-text");
+
+    // Duplicate content to make seamless scrolling
+    let originalText = announcementText.innerHTML;
+    announcementText.innerHTML = originalText + " | " + originalText;
+});
+
+
 
 // Hero section - Ensure carousel works properly
 document.addEventListener("DOMContentLoaded", function () {
