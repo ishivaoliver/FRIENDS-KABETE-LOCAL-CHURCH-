@@ -18,7 +18,7 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
 // Top navbar  section 
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
-    const text = "Welcome to Friends Church Quakers Kabete";
+    const text = "Welcome to Friends Church (Quakers) Kabete";
     let index = 0;
 
     function typeText() {
