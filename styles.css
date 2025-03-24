@@ -169,7 +169,6 @@ html {
     margin-left: auto;
   }
 }
-
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -178,15 +177,16 @@ html {
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  /* Maintains the F-pattern */
+  justify-content: flex-start; /* Maintains F-pattern */
+  padding: 0;
 }
 
+/* Carousel Fix */
 #carouselExampleFade {
   padding: 0;
 }
 
-/* Carousel Image Fix */
+/* Carousel Image Styling */
 .carousel-inner,
 .carousel-item {
   width: 100vw !important;
@@ -194,8 +194,8 @@ html {
 }
 
 .hero-img {
+  width: 100%;
   height: 100vh;
-
   object-fit: cover;
 }
 
@@ -207,39 +207,42 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 5;
 }
 
-/* Static Hero Content */
+/* Hero Content - Ensures Readability */
 .hero-content {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 5%;
   color: white;
   z-index: 10;
-  max-width: 45%;
+  max-width: 50%;
 }
 
-/* Headings - Bold & Scalable */
+/* Headings - Fully Responsive & Scalable */
 .hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   line-height: 1.2;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+  word-wrap: break-word;
 }
 
 /* Paragraph Animation - Slide Up */
 .hero-content p {
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 600;
   line-height: 1.6;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  
+  max-width: 90%;
+  word-wrap: break-word;
+
   opacity: 0; /* Initially hidden */
-  transform: translateY(30px); /* Start position */
+  transform: translateY(30px); /* Slide-up effect */
   animation: slideUp 1s ease-out forwards;
-  animation-delay: 0.8s; /* Delay to make it appear after heading */
+  animation-delay: 0.8s;
 }
 
 /* Keyframes for Slide-Up Effect */
@@ -254,17 +257,18 @@ html {
   }
 }
 
-}
-
-/* Button Styles - Modern & Futuristic */
+/* Hero Buttons - Modern & Responsive */
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 
 .hero-buttons .btn {
-  padding: 14px 24px;
-  font-size: 1.2rem;
+  padding: 12px 20px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 50px;
@@ -289,7 +293,7 @@ html {
   transform: scale(1.05);
 }
 
-/* Outline Button - Animated Neon Effect */
+/* Outline Button - Neon Hover Effect */
 .hero-buttons .btn-outline-light {
   color: white;
   border: 2px solid white;
@@ -333,7 +337,6 @@ html {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-left: 3%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -344,15 +347,48 @@ html {
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 100%;
   }
 
   .hero-buttons {
-    justify-content: center;
+    flex-direction: column; /* Stack buttons */
+    align-items: center;
   }
 
   .hero-buttons .btn {
     font-size: 1rem;
-    padding: 12px 20px;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    top: 15%;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
 
