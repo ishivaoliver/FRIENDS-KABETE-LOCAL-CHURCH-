@@ -366,13 +366,18 @@ function closeDonateModal() {
     document.getElementById('donate-modal').style.display = 'none';
 }
 
-// M-Pesa STK Push request
+// M-Pesa STK Push request with amount
 document.getElementById('donation-form').addEventListener('submit', function (e) {
     e.preventDefault();
     const phone = document.getElementById('mpesa-number').value;
-    const amount = 500; // Default donation amount
+    const amount = document.getElementById('mpesa-amount').value;
 
-    fetch('stk_push.php', {
+    if (amount <= 0) {
+        alert("Please enter a valid donation amount.");
+        return;
+    }
+
+    fetch('Php/stk_push.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({ phone, amount })
@@ -388,12 +393,6 @@ document.getElementById('donation-form').addEventListener('submit', function (e)
         })
         .catch(error => console.error('Error:', error));
 });
-
-// Copy Bank Details
-function copyBankDetails() {
-    navigator.clipboard.writeText("Bank: ABC Bank\nAccount Name: Friends Church\nAccount Number: 1234567890");
-    alert("Bank details copied to clipboard.");
-}
 
 
 // Blog section 
