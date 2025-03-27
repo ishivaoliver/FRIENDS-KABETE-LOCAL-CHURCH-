@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Donation section 
+// Open donation modal
 function openDonateModal(type) {
     const modal = document.getElementById('donate-modal');
     modal.style.display = 'flex';
@@ -358,37 +358,42 @@ function openDonateModal(type) {
 
     if (type === 'mpesa') {
         document.getElementById('mpesa-section').style.display = 'block';
-    } else if (type === 'paypal') {
-        document.getElementById('paypal-section').style.display = 'block';
-    } else if (type === 'bank') {
-        document.getElementById('bank-section').style.display = 'block';
     }
 }
 
+// Close donation modal
 function closeDonateModal() {
     document.getElementById('donate-modal').style.display = 'none';
 }
 
-// M-Pesa STK Push (Simulated)
+// M-Pesa STK Push request
 document.getElementById('donation-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    const mpesaNumber = document.getElementById('mpesa-number').value;
-    alert(`STK Push sent to ${mpesaNumber}. Confirm on your phone.`);
-    closeDonateModal();
-});
+    const phone = document.getElementById('mpesa-number').value;
+    const amount = 500; // Default donation amount
 
-// Simulated PayPal Redirection
-function processPayPal() {
-    alert('Redirecting to PayPal...');
-    window.location.href = "https://www.paypal.com/donate";
-}
+    fetch('stk_push.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ phone, amount })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ResponseCode === "0") {
+                alert("STK Push sent. Check your M-Pesa app.");
+                closeDonateModal();
+            } else {
+                alert("Failed to send STK Push. Try again.");
+            }
+        })
+        .catch(error => console.error('Error:', error));
+});
 
 // Copy Bank Details
 function copyBankDetails() {
     navigator.clipboard.writeText("Bank: ABC Bank\nAccount Name: Friends Church\nAccount Number: 1234567890");
     alert("Bank details copied to clipboard.");
 }
-
 
 
 // Blog section 

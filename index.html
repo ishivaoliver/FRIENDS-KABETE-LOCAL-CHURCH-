@@ -723,13 +723,13 @@
     <p class="section-description">
       Your generous contributions help us spread the love of Christ, support community outreach, and provide vital services to those in need.
     </p>
-    
+
     <!-- Progress Bar -->
     <div class="progress-container my-4">
       <h5>Fundraising Goal: Ksh 500,000</h5>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-          Ksh105,500 Raised
+          Ksh 105,500 Raised
         </div>
       </div>
     </div>
@@ -746,15 +746,17 @@
       <div class="col-md-4">
         <div class="donation-card">
           <h4 class="donation-title">PayPal</h4>
-          <p>Securely donate using PayPal. Support us from anywhere in the world.</p>
-          <button class="btn btn-success donate-btn" onclick="openDonateModal('paypal')">Donate via PayPal</button>
+          <p>Securely donate using PayPal from anywhere in the world.</p>
+          <button class="btn btn-success donate-btn" onclick="window.location.href='https://www.paypal.com/donate'">
+            Donate via PayPal
+          </button>
         </div>
       </div>
       <div class="col-md-4">
         <div class="donation-card">
           <h4 class="donation-title">Bank Transfer</h4>
           <p>Make a direct deposit to our church’s bank account.</p>
-          <button class="btn btn-secondary donate-btn" onclick="openDonateModal('bank')">Bank Transfer</button>
+          <button class="btn btn-secondary donate-btn" onclick="copyBankDetails()">Bank Transfer</button>
         </div>
       </div>
     </div>
@@ -769,21 +771,6 @@
             <label for="mpesa-number">M-Pesa Number:</label>
             <input type="tel" id="mpesa-number" class="form-control" placeholder="Enter your Safaricom number" required>
             <button type="submit" class="btn btn-primary mt-3">Proceed with M-Pesa</button>
-          </div>
-
-          <div id="paypal-section" class="payment-section">
-            <p>Click the button below to proceed with PayPal.</p>
-            <button type="button" class="btn btn-success mt-3" onclick="processPayPal()">Donate via PayPal</button>
-          </div>
-
-          <div id="bank-section" class="payment-section">
-            <p>Bank Account Details:</p>
-            <ul>
-              <li><strong>Bank:</strong> ABC Bank</li>
-              <li><strong>Account Name:</strong> Friends Church</li>
-              <li><strong>Account Number:</strong> 1234567890</li>
-            </ul>
-            <button type="button" class="btn btn-secondary mt-3" onclick="copyBankDetails()">Copy Bank Details</button>
           </div>
         </form>
       </div>

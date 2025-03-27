@@ -1344,7 +1344,6 @@ html {
   font-weight: bold;
   line-height: 25px;
   text-align: center;
-  border-radius: 50px 0 0 50px;
 }
 
 /* Donation Cards */
@@ -1355,6 +1354,11 @@ html {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.donation-card:hover {
+  transform: scale(1.05);
 }
 
 .donation-title {
@@ -1389,11 +1393,29 @@ html {
   border-radius: 10px;
   max-width: 400px;
   width: 90%;
+  text-align: center;
 }
 
-/* Hide other payment options */
-.payment-section {
-  display: none;
+/* Payment Section */
+#mpesa-section {
+  background: #28a745;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+#mpesa-section input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+#mpesa-section button {
+  background: white;
+  color: #28a745;
+  font-weight: bold;
 }
 
 /* Blog Section */
