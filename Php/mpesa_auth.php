@@ -1,8 +1,8 @@
 <?php
 function generateAccessToken()
 {
-  $consumerKey = 'YOUR_CONSUMER_KEY';
-  $consumerSecret = 'YOUR_CONSUMER_SECRET';
+  $consumerKey = '';
+  $consumerSecret = '';
 
   $credentials = base64_encode($consumerKey . ":" . $consumerSecret);
   $url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';

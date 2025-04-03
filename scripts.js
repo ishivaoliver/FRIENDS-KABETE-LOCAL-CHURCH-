@@ -369,29 +369,31 @@ function closeDonateModal() {
 // M-Pesa STK Push request with amount
 document.getElementById('donation-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    const phone = document.getElementById('mpesa-number').value;
-    const amount = document.getElementById('mpesa-amount').value;
 
-    if (amount <= 0) {
-        alert("Please enter a valid donation amount.");
+    const mpesaNumber = document.getElementById('mpesa-number').value;
+    const amount = document.getElementById('amount').value;
+
+    if (!mpesaNumber || !amount) {
+        alert("Please enter both phone number and amount.");
         return;
     }
 
-    fetch('Php/stk_push.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ phone, amount })
+    fetch("php/stk_push.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ phone: mpesaNumber, amount: amount })
     })
         .then(response => response.json())
         .then(data => {
             if (data.ResponseCode === "0") {
-                alert("STK Push sent. Check your M-Pesa app.");
-                closeDonateModal();
+                alert("STK Push sent to your phone. Please confirm payment.");
             } else {
-                alert("Failed to send STK Push. Try again.");
+                alert("Error: " + data.errorMessage);
             }
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.error("Error:", error));
 });
 
 

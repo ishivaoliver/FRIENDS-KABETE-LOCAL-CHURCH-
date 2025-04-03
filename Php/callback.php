@@ -1,22 +1,19 @@
 <?php
-$data = file_get_contents('php://input');
-$logFile = "mpesa_log.txt";
-file_put_contents($logFile, $data . PHP_EOL, FILE_APPEND);
+header("Content-Type: application/json");
 
-$response = json_decode($data, true);
+$callbackResponse = file_get_contents("php://input");
+$logFile = "mpesa_response.log";
+file_put_contents($logFile, $callbackResponse, FILE_APPEND);
 
-if (isset($response['Body']['stkCallback'])) {
-  $callback = $response['Body']['stkCallback'];
+$data = json_decode($callbackResponse, true);
 
-  if ($callback['ResultCode'] == 0) {
-    $amount = $callback['CallbackMetadata']['Item'][0]['Value'];
-    $mpesaReceipt = $callback['CallbackMetadata']['Item'][1]['Value'];
-    $phone = $callback['CallbackMetadata']['Item'][4]['Value'];
+if (isset($data["Body"]["stkCallback"]["ResultCode"])) {
+  $resultCode = $data["Body"]["stkCallback"]["ResultCode"];
 
-    $db = new mysqli("localhost", "DB_USER", "DB_PASS", "DB_NAME");
-    $stmt = $db->prepare("INSERT INTO donations (phone, amount, receipt) VALUES (?, ?, ?)");
-    $stmt->bind_param("sis", $phone, $amount, $mpesaReceipt);
-    $stmt->execute();
-    $stmt->close();
+  if ($resultCode == 0) {
+    $mpesaReceipt = $data["Body"]["stkCallback"]["CallbackMetadata"]["Item"][1]["Value"];
+    file_put_contents($logFile, "Payment Successful: Receipt: " . $mpesaReceipt . "\n", FILE_APPEND);
+  } else {
+    file_put_contents($logFile, "Payment Failed\n", FILE_APPEND);
   }
 }
