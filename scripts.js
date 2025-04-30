@@ -305,7 +305,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const eventDates = [
         { id: "event1", date: "2024-12-02T10:00:00" },
         { id: "event2", date: "2024-12-15T08:30:00" },
-        { id: "event3", date: "2025-01-12T09:00:00" }
+        { id: "event3", date: "2025-01-12T09:00:00" },
+        { id: "event4", date: "2025-02-10T09:00:00" },
+        { id: "event5", date: "2025-03-03T15:00:00" },
+        { id: "event6", date: "2025-03-23T13:00:00" }
     ];
 
     eventDates.forEach(event => {
